@@ -98,6 +98,11 @@ a:focus {
   outline: none;
 }
 
+.scroll-lock {
+  overflow: hidden;
+}
+
+
 /* navbar css */
 .nav-link.active {
   @apply text-secondary;
@@ -107,4 +112,9 @@ a:focus {
 /* why-we */
 .why-we {
   background-image: linear-gradient(to right, rgba(49, 79, 162, 0.05) 55%, #37D6C9 55%);
+}
+@media screen and (max-width:767px) {
+  .why-we {
+    background-image: linear-gradient(to bottom, rgba(49, 79, 162, 0.05) 65%, #37D6C9 65%);
+  }
 }
