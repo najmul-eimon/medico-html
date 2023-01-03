@@ -7,6 +7,8 @@
 
   <link rel="shortcut icon" href="./../src/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./../src/css/all.min.css">
+  <link rel="stylesheet" href="./../src/css/magnific-popup.css">
+  <link rel="stylesheet" href="./../src/css/select2.min.css">
   <link rel="stylesheet" href="./../dist/output.css">
 
   <script src="https://unpkg.com/phosphor-icons"></script>
@@ -25,7 +27,7 @@
 
         <div>
           <!-- mobile screen overlay -->
-          <div class="mobile-overlay transition-all ease-linear duration-500 h-screen w-full bg-primary-text/30 fixed inset-0 opacity-0 invisible z-40 lg:hidden"></div>
+          <div class="mobile-overlay transition-all ease-linear duration-500 h-screen w-full bg-black/30 fixed inset-0 opacity-0 invisible z-40 lg:hidden"></div>
 
           <!-- mobile menu toggle button -->
           <button type="button" class="menu-toggle h-5 w-5 flex items-center justify-center lg:hidden">
@@ -46,9 +48,9 @@
             <!-- menu items -->
             <ul class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-7">
               <li><a href="./../index.html" class="nav-link inlione-block text-base text-primary-text">Home</a></li>
-              <li><a href="#!" class="nav-link inlione-block text-base text-primary-text active">About</a></li>
-              <li><a href="#!" class="nav-link inlione-block text-base text-primary-text">Services</a></li>
-              <li><a href="#!" class="nav-link inlione-block text-base text-primary-text">Doctors</a></li>
+              <li><a href="./about.html" class="nav-link inlione-block text-base text-primary-text active">About</a></li>
+              <li><a href="./service.html" class="nav-link inlione-block text-base text-primary-text">Services</a></li>
+              <li><a href="./doctors.html" class="nav-link inlione-block text-base text-primary-text">Doctors</a></li>
               <li><a href="#!" class="nav-link inlione-block text-base text-primary-text">Blog</a></li>
               <li><a href="#!" class="inline-block py-3 px-12 border border-secondary/20 bg-secondary/10 text-sm font-semibold text-secondary rounded-md">Login</a></li>
             </ul>
@@ -194,20 +196,26 @@
 
           <!-- counter -->
           <div class="lg:col-span-2 md:row-start-2 md:col-start-2 lg:row-start-auto lg:col-start-auto">
-            <ul class="flex flex-row lg:flex-col flex-wrap gap-y-4 lg:gap-20 justify-center">
+            <ul id="counter" class="flex flex-row lg:flex-col flex-wrap gap-y-4 lg:gap-20 justify-center">
               <li class="w-1/2 sm:w-1/3 lg:w-full text-center">
                 <p class="text-[40px] lg:text-5xl xl:text-[64px] font-semibold text-[rgba(255,255,255,0.16)]">250+</p>
-                <p class="text-2xl lg:text-3xl xl:text-5xl leading-9 xl:leading-[72px] -mt-7 xl:-mt-12 font-semibold text-white">250+</p>
+                <p class="text-2xl lg:text-3xl xl:text-5xl leading-9 xl:leading-[72px] -mt-9 md:-mt-8 lg:-mt-7 xl:-mt-10 font-semibold text-white">
+                  <span class="counter" data-count="250">0</span>+
+                </p>
                 <span class="block text-sm lg:text-base xl:text-2xl text-white">Modern ICU Bed</span>
               </li>
               <li class="w-1/2 sm:w-1/3 lg:w-full text-center">
                 <p class="text-[40px] lg:text-5xl xl:text-[64px] font-semibold text-[rgba(255,255,255,0.16)]">200+</p>
-                <p class="text-2xl lg:text-3xl xl:text-5xl leading-9 xl:leading-[72px] -mt-7 xl:-mt-12 font-semibold text-white">200+</p>
+                <p class="text-2xl lg:text-3xl xl:text-5xl leading-9 xl:leading-[72px] -mt-9 md:-mt-8 lg:-mt-7 xl:-mt-10 font-semibold text-white">
+                  <span class="counter" data-count="200">0</span>+
+                </p>
                 <span class="block text-sm lg:text-base xl:text-2xl text-white">Pathologist</span>
               </li>
               <li class="w-1/2 sm:w-1/3 lg:w-full text-center">
                 <p class="text-[40px] lg:text-5xl xl:text-[64px] font-semibold text-[rgba(255,255,255,0.16)]">100+</p>
-                <p class="text-2xl lg:text-3xl xl:text-5xl leading-9 xl:leading-[72px] -mt-7 xl:-mt-12 font-semibold text-white">100+</p>
+                <p class="text-2xl lg:text-3xl xl:text-5xl leading-9 xl:leading-[72px] -mt-9 md:-mt-8 lg:-mt-7 xl:-mt-10 font-semibold text-white">
+                  <span class="counter" data-count="100">0</span>+
+                </p>
                 <span class="block text-sm lg:text-base xl:text-2xl text-white">Expert Doctors</span>
               </li>
             </ul>
@@ -220,25 +228,25 @@
     <!-- our-history start -->
     <section class="our-history py-12 lg:pt-10">
       <div class="container">
-        <div class="lg:pt-12 lg:pb-[165px] lg:bg-map-image bg-cover bg-no-repeat bg-center">
+        <div class="lg:pt-12 lg:pb-[155px] lg:bg-map-image bg-cover xl:bg-contain bg-no-repeat bg-center">
           <!-- title -->
-          <div class="pb-6 lg:pb-[70px]">
-            <h2 class="text-2xl lg:text-4xl xl:text-5xl font-bold text-secondary-text text-center">Our History</h2>
+          <div class="mb-6 lg:mb-10 xl:mb-[70px]">
+            <h2 class="text-2xl lg:text-4xl xl:text-[40px] 2xl:text-5xl font-bold text-secondary-text text-center">Our History</h2>
           </div>
 
           <!-- content -->
-          <div class="xl:mx-[68px] flex flex-wrap items-center justify-center gap-6 xl:gap-10">
+          <div class="flex flex-wrap items-center justify-center gap-6 xl:gap-10">
             <!-- item 1 -->
             <div>
               <div class="h-[173px] border-l-[3px] border-[#EB67A6] ml-14 pl-3 mb-5 hidden lg:block">
-                <h4 class="pb-3 text-2xl font-semibold text-secondary-text">2016-2017</h4>
+                <h4 class="pb-3 text-xl xl:text-2xl font-semibold text-secondary-text">2016-2017</h4>
                 <p class="text-lg font-medium text-secondary-text">Subtitle</p>
               </div>
               <div class="h-[132px] w-[132px] lg:h-28 lg:w-28 rounded-2xl lg:rounded-full bg-gradient-to-b from-[#EB67A6] to-[#EB67DE] drop-shadow-[6.44211px_6.44211px_12.8842px_rgba(0,0,0,0.15)] flex items-center justify-center">
                 <p class="text-xl font-semibold text-white hidden lg:block">Launch</p>
 
                 <!-- mobile content -->
-                <div class="lg:hidden">
+                <div class="text-center lg:hidden">
                   <h5 class="pb-3 text-white text-xl font-semibold">2016-2017</h5>
                   <p class="text-base font-medium text-white">Subtitle</p>
                 </div>
@@ -248,14 +256,14 @@
             <!-- item 2 -->
             <div>
               <div class="h-[173px] border-l-[3px] border-[#EB67A6] ml-14 pl-3 mb-5 hidden lg:block">
-                <h4 class="pb-3 text-2xl font-semibold text-secondary-text">2017-2018</h4>
+                <h4 class="pb-3 text-xl xl:text-2xl font-semibold text-secondary-text">2017-2018</h4>
                 <p class="text-lg font-medium text-secondary-text">Subtitle</p>
               </div>
               <div class="h-[132px] w-[132px] lg:h-28 lg:w-28 rounded-2xl lg:rounded-full bg-gradient-to-b from-[#5B6AD5] to-[#5BA9D5] drop-shadow-[6.44211px_6.44211px_12.8842px_rgba(0,0,0,0.15)] flex items-center justify-center">
                 <p class="text-xl font-semibold text-white hidden lg:block">Launch</p>
 
                 <!-- mobile content -->
-                <div class="lg:hidden">
+                <div class="text-center lg:hidden">
                   <h5 class="pb-3 text-white text-xl font-semibold">2017-2018</h5>
                   <p class="text-base font-medium text-white">Subtitle</p>
                 </div>
@@ -265,14 +273,14 @@
             <!-- item 3 -->
             <div>
               <div class="h-[173px] border-l-[3px] border-[#EB67A6] ml-14 pl-3 mb-5 hidden lg:block">
-                <h4 class="pb-3 text-2xl font-semibold text-secondary-text">2018-2019</h4>
+                <h4 class="pb-3 text-xl xl:text-2xl font-semibold text-secondary-text">2018-2019</h4>
                 <p class="text-lg font-medium text-secondary-text">Subtitle</p>
               </div>
               <div class="h-[132px] w-[132px] lg:h-28 lg:w-28 rounded-2xl lg:rounded-full bg-gradient-to-b from-[#379794] to-[#37976F] drop-shadow-[6.44211px_6.44211px_12.8842px_rgba(0,0,0,0.15)] flex items-center justify-center">
                 <p class="text-xl font-semibold text-white hidden lg:block">Launch</p>
 
                 <!-- mobile content -->
-                <div class="lg:hidden">
+                <div class="text-center lg:hidden">
                   <h5 class="pb-3 text-white text-xl font-semibold">2018-2019</h5>
                   <p class="text-base font-medium text-white">Subtitle</p>
                 </div>
@@ -282,14 +290,14 @@
             <!-- item 4 -->
             <div>
               <div class="h-[173px] border-l-[3px] border-[#EB67A6] ml-14 pl-3 mb-5 hidden lg:block">
-                <h4 class="pb-3 text-2xl font-semibold text-secondary-text">2019-2020</h4>
+                <h4 class="pb-3 text-xl xl:text-2xl font-semibold text-secondary-text">2019-2020</h4>
                 <p class="text-lg font-medium text-secondary-text">Subtitle</p>
               </div>
               <div class="h-[132px] w-[132px] lg:h-28 lg:w-28 rounded-2xl lg:rounded-full bg-gradient-to-b from-[#F4AC5D] to-[#F4785D] drop-shadow-[6.44211px_6.44211px_12.8842px_rgba(0,0,0,0.15)] flex items-center justify-center">
                 <p class="text-xl font-semibold text-white hidden lg:block">Launch</p>
 
                 <!-- mobile content -->
-                <div class="lg:hidden">
+                <div class="text-center lg:hidden">
                   <h5 class="pb-3 text-white text-xl font-semibold">2019-2020</h5>
                   <p class="text-base font-medium text-white">Subtitle</p>
                 </div>
@@ -299,14 +307,14 @@
             <!-- item 5 -->
             <div>
               <div class="h-[173px] border-l-[3px] border-[#EB67A6] ml-14 pl-3 mb-5 hidden lg:block">
-                <h4 class="pb-3 text-2xl font-semibold text-secondary-text">2020-2022</h4>
+                <h4 class="pb-3 text-xl xl:text-2xl font-semibold text-secondary-text">2020-2022</h4>
                 <p class="text-lg font-medium text-secondary-text">Subtitle</p>
               </div>
               <div class="h-[132px] w-[132px] lg:h-28 lg:w-28 rounded-2xl lg:rounded-full bg-gradient-to-b from-[#C45BD5] to-[#D55B5B] drop-shadow-[6.44211px_6.44211px_12.8842px_rgba(0,0,0,0.15)] flex items-center justify-center">
                 <p class="text-xl font-semibold text-white hidden lg:block">Launch</p>
 
                 <!-- mobile content -->
-                <div class="lg:hidden">
+                <div class="text-center lg:hidden">
                   <h5 class="pb-3 text-white text-xl font-semibold">2020-2022</h5>
                   <p class="text-base font-medium text-white">Subtitle</p>
                 </div>
@@ -317,6 +325,95 @@
       </div>
     </section>
     <!-- our-history end -->
+
+    <!-- doctors start -->
+    <section class="doctors py-10 lg:py-16">
+      <div class="container">
+        <!-- title -->
+        <div class="border-b-2 border-black/5 mb-6 md:mb-10">
+          <h2 class="pb-4 text-2xl lg:text-[32px] font-semibold text-secondary relative after:content after:w-[86px] after:bg-primary after:rounded after:h-[2px] after:absolute after:bottom-[-2px] after:left-0">Our Certified Doctores</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- item 1 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-3 md:px-4 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)]">
+            <!-- image -->
+            <div class="h-[60px] md:h-20 xl:h-[100px] w-[60px] md:w-20 xl:w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img2.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl lg:text-2xl font-semibold text-secondary">Dr. Maverick Ludeman</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-1 md:py-2">Cardiologist</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 md:px-6 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="#!" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+          <!-- item 2 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-3 md:px-4 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)]">
+            <!-- image -->
+            <div class="h-[60px] md:h-20 xl:h-[100px] w-[60px] md:w-20 xl:w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img1.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl lg:text-2xl font-semibold text-secondary">Dr. Lane Toki</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-1 md:py-2">General Surgery</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 md:px-6 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="#!" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+          <!-- item 3 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-3 md:px-4 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)]">
+            <!-- image -->
+            <div class="h-[60px] md:h-20 xl:h-[100px] w-[60px] md:w-20 xl:w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img3.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl lg:text-2xl font-semibold text-secondary">Dr. Leonard Matsko</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-1 md:py-2">Psychiatry</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[46px] xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 md:px-6 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="#!" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- doctors end -->
   </main>
   <!-- main end -->
 
@@ -406,6 +503,8 @@
   <!-- footer end -->
 
   <script src="./../src/js/jquery-3.6.1.min.js"></script>
+  <script src="./../src/js/jquery.magnific-popup.min.js"></script>
+  <script src="./../src/js/select2.min.js"></script>
   <script src="./../src/js/script.js"></script>
 </body>
 </html>

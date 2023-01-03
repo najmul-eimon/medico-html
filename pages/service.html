@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./../src/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./../src/css/all.min.css">
+  <link rel="stylesheet" href="./../src/css/magnific-popup.css">
+  <link rel="stylesheet" href="./../src/css/select2.min.css">
+  <link rel="stylesheet" href="./../dist/output.css">
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <title>Medico | Services</title>
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="py-2 xl:py-4 w-full fixed left-0 top-0 z-30 bg-white/40 backdrop-blur shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <!-- logo -->
+        <a href="./../index.html" class="inline-block w-[75px] sm:w-[150px] lg:w-auto">
+          <img src="./../src/images/logo.png" alt="Logo">
+        </a>
+
+        <div>
+          <!-- mobile screen overlay -->
+          <div class="mobile-overlay transition-all ease-linear duration-500 h-screen w-full bg-black/30 fixed inset-0 opacity-0 invisible z-40 lg:hidden"></div>
+
+          <!-- mobile menu toggle button -->
+          <button type="button" class="menu-toggle h-5 w-5 flex items-center justify-center lg:hidden">
+            <img src="./../src/images/svg/menu.svg" alt="Logo">
+          </button>
+
+          <div class="mobile-menu transition-all ease-linear duration-500 h-screen lg:h-auto w-[320px] lg:w-auto bg-white lg:bg-transparent fixed z-50 lg:static top-0 -left-[320px] p-4 lg:p-0 overflow-y-auto lg:overscroll-none shadow lg:shadow-none">
+            <!-- close menu button -->
+            <button type="button" class="close-menu h-8 w-8 bg-secondary rounded-full flex items-center justify-center absolute top-3 right-3 lg:hidden">
+              <i class="ph-x text-white"></i>
+            </button>
+
+            <!-- mobile screen logo -->
+            <a href="./../index.html" class="inline-block mb-6 w-36 lg:hidden">
+              <img src="./../src/images/logo.png" alt="Logo">
+            </a>
+
+            <!-- menu items -->
+            <ul class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-7">
+              <li><a href="./../index.html" class="nav-link inlione-block text-base text-primary-text">Home</a></li>
+              <li><a href="./about.html" class="nav-link inlione-block text-base text-primary-text">About</a></li>
+              <li><a href="./service.html" class="nav-link inlione-block text-base text-primary-text active">Services</a></li>
+              <li><a href="./doctors.html" class="nav-link inlione-block text-base text-primary-text">Doctors</a></li>
+              <li><a href="#!" class="nav-link inlione-block text-base text-primary-text">Blog</a></li>
+              <li><a href="#!" class="inline-block py-3 px-12 border border-secondary/20 bg-secondary/10 text-sm font-semibold text-secondary rounded-md">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- main start -->
+  <main class="mt-9 sm:mt-[55px] lg:mt-[67px] xl:mt-[83px]">
+
+    <!-- page title start -->
+    <div class="page-title pt-6 lg:pt-12 pb-3 lg:pb-6">
+      <div class="container">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-[40px] font-semibold text-primary-text text-center">Services</h2>
+      </div>
+    </div>
+    <!-- page title end -->
+
+    <!-- service-intro start -->
+    <section class="service-intro py-10 lg:py-16">
+      <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div class="md:col-span-5 text-center md:text-left">
+            <h3 class="text-2xl lg:text-4xl xl:text-[40px] leading-9 lg:leading-[52px] xl:leading-[60px] font-semibold text-primary-text">We are a progressive medical clinic.</h3>
+          </div>
+          <div class="md:col-span-7 text-center md:text-left">
+            <p class="pb-4 text-sm lg:text-base text-primary-text/60">Adipiscing elit, sed do euismod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <p class="text-sm lg:text-base text-primary-text/60">Adipiscing elit, sed do euismod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Adipiscing elit, sed do euismod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- service-intro end -->
+
+    <!-- services start -->
+    <section class="service py-10 lg:py-16">
+      <div class="container">
+        <!-- title -->
+        <div class="border-b-2 border-black/5 mb-6 md:mb-10">
+          <h2 class="pb-4 text-2xl lg:text-[32px] font-semibold text-secondary relative after:content after:w-[86px] after:bg-primary after:rounded after:h-[2px] after:absolute after:bottom-[-2px] after:left-0">Services</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 md:gap-y-10">
+          <!-- item 1 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="./../src/images/svg/stethoscope.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl xl:text-2xl font-medium text-primary-text">Visit a doctor</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="./../src/images/svg/health-checkup.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl xl:text-2xl font-medium text-primary-text">Health Checkup</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="./../src/images/svg/pharmacy.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl lg:text-2xl font-medium text-primary-text">Pharmacy</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+
+          <!-- item 4 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="./../src/images/svg/hospital-bed.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl xl:text-2xl font-medium text-primary-text">Hospital</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+
+          <!-- item 5 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="./../src/images/svg/diagnostic.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl xl:text-2xl font-medium text-primary-text">Diagnostic</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+
+          <!-- item 6 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="./../src/images/svg/surgery.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl xl:text-2xl font-medium text-primary-text">Surgery</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- services end -->
+
+    <!-- video start -->
+    <section class="video md:py-10">
+      <div class="container">
+        <div class="relative h-[380px] md:h-auto rounded-[20px] overflow-hidden">
+          <img src="./../src/images/video.png" class="w-full h-full object-cover" alt="Video Image">
+          <div class="h-full w-full bg-black/20 absolute inset-0 flex items-center justify-center z-20">
+            <a class="relative video-popup h-[60px] lg:h-[92px] w-[60px] lg:w-[92px] flex items-center justify-center" href="https://www.youtube.com/watch?v=ZK-rNEhJIDs">
+              <img src="./../src/images/svg/play.svg" alt="Play icon">
+              <span class="absolute top-0 left-0 h-[60px] lg:h-[92px] w-[60px] lg:w-[92px] flex items-center justify-center animate-[play-animation] play-animation">
+                <img src="./../src/images/svg/play.svg" alt="Play icon">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- video end -->
+
+    <!-- pricing start -->
+    <section class="pricing py-10 lg:py-16">
+      <div class="container">
+        <!-- title -->
+        <div class="border-b-2 border-black/5 mb-6 md:mb-10">
+          <h2 class="pb-4 text-2xl lg:text-[32px] font-semibold text-secondary relative after:content after:w-[86px] after:bg-primary after:rounded after:h-[2px] after:absolute after:bottom-[-2px] after:left-0">Health Checkup Prices</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-center">
+          <!-- item 1 -->
+          <div class="pricing-card h-fit rounded-[10px] bg-white shadow-[0px_4px_20px_rgba(4,90,181,0.08)] p-6">
+            <h4 class="text-primary-text font-bold text-[32px]">$1,500</h4>
+            <h5 class="py-4 lg:py-6 text-primary-text font-light text-2xl">Primary</h5>
+            <ul class="space-y-4 mb-4 lg:mb-6">
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Complete Blood Count</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Blood Sugar</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Lipid Profile</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Blood Grouping</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">HBsAg</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Serum Creatinine</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Urine R/E</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">ECG</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">X-Ray Chest PA View</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Ultrasonography</p></li>
+            </ul>
+
+            <div class="text-center">
+              <a href="#!" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Choose Plan</a>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="pricing-card h-fit rounded-[10px] bg-white shadow-[0px_4px_20px_rgba(4,90,181,0.08)] p-6">
+            <h4 class="text-primary-text font-bold text-[32px]">$1,800</h4>
+            <h5 class="py-4 lg:py-6 text-primary-text font-light text-2xl">Standard</h5>
+            <ul class="space-y-4 mb-4 lg:mb-6">
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Complete Blood Count</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Blood Sugar</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Lipid Profile</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Blood Grouping</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">HBsAg</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Serum Creatinine</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Urine R/E</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">ECG</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">X-Ray Chest PA View</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Ultrasonography</p></li>
+            </ul>
+
+            <div class="text-center">
+              <a href="#!" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Choose Plan</a>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="pricing-card h-fit active rounded-[10px] bg-white shadow-[0px_4px_20px_rgba(4,90,181,0.08)] p-6">
+            <h4 class="text-primary-text font-bold text-[32px]">$2,000</h4>
+            <h5 class="py-4 lg:py-6 text-primary-text font-light text-2xl">Premium</h5>
+            <ul class="space-y-4 mb-4 lg:mb-6">
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Complete Blood Count</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Blood Sugar</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Lipid Profile</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Blood Grouping</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">HBsAg</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Serum Creatinine</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Urine R/E</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">ECG</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">X-Ray Chest PA View</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Ultrasonography</p></li>
+            </ul>
+
+            <div class="text-center">
+              <a href="#!" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Choose Plan</a>
+            </div>
+          </div>
+
+          <!-- item 4 -->
+          <div class="pricing-card h-fit rounded-[10px] bg-white shadow-[0px_4px_20px_rgba(4,90,181,0.08)] p-6">
+            <h4 class="text-primary-text font-bold text-[32px]">$3,000</h4>
+            <h5 class="py-4 lg:py-6 text-primary-text font-light text-2xl">Platinum </h5>
+            <ul class="space-y-4 mb-4 lg:mb-6">
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Complete Blood Count</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Blood Sugar</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Lipid Profile</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Blood Grouping</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">HBsAg</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Serum Creatinine</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Urine R/E</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">ECG</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">X-Ray Chest PA View</p></li>
+              <li class="flex items-center gap-3"><i class="ph-check text-2xl text-primary"></i><p class="text-sm text-primary-text/60">Ultrasonography</p></li>
+            </ul>
+
+            <div class="text-center">
+              <a href="#!" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Choose Plan</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- pricing end -->
+  </main>
+  <!-- main end -->
+
+  <!-- footer start -->
+  <footer class="bg-[#393C45] py-5 md:py-10">
+
+    <!-- footer-top start -->
+    <section class="footer-top pb-6">
+      <div class="container">
+        <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-12 gap-6">
+
+          <!-- company -->
+          <div class="sm:col-span-3 lg:col-span-4 text-center lg:text-left">
+            <a href="./../index.html" class="inline-block mx-auto lg:mx-0 w-[150px] md:w-auto">
+              <img src="./../src/images/footer-logo.png" alt="Logo">
+            </a>
+            <p class="text-white/60 text-sm md:text-base py-4 md:py-6 font-mulish">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam. Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam</p>
+            <ul class="flex items-center justify-center lg:justify-start gap-6">
+              <li><a href="#"><i class="fab fa-facebook-f text-white/60"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter text-white/60"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram text-white/60"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in text-white/60"></i></a></li>
+              <li><a href="#"><i class="fab fa-youtube text-white/60"></i></a></li>
+            </ul>
+          </div>
+
+          <!-- departments -->
+          <div class="lg:col-span-3 text-center sm:text-left">
+            <h4 class="pb-5 md:pb-10 text-white font-mulish font-bold text-base md:text-xl">Departments</h4>
+            <ul class="space-y-3 md:space-y-[18px]">
+              <li><a href="#!" class="text-base font-mulish text-white/60">Emergency</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Medicine</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Neuro Science</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Kidney & Urology</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Surgery</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Digestive</a></li>
+            </ul>
+          </div>
+
+          <!-- services -->
+          <div class="lg:col-span-2 text-center sm:text-left">
+            <h4 class="pb-5 md:pb-10 text-white font-mulish font-bold text-base md:text-xl">Services</h4>
+            <ul class="space-y-3 md:space-y-[18px]">
+              <li><a href="#!" class="text-base font-mulish text-white/60">Visit A Doctor</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Health Checkup</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Pharmacy</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Hospital</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Diagnostic</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Surgery</a></li>
+            </ul>
+          </div>
+
+          <!-- contact -->
+          <div class="lg:col-span-3 text-center sm:text-left">
+            <h4 class="pb-5 md:pb-10 text-white font-mulish font-bold text-base md:text-xl">Contact us</h4>
+            <ul class="space-y-3 md:space-y-7">
+              <li class="flex flex-col sm:flex-row gap-2">
+                <i class="ph-envelope-simple text-xl text-white inline-block mx-auto sm:mx-0 sm:mt-[2px]"></i>
+                <p class="text-base text-white/60 font-mulish w-[calc(100%-20px)] truncate">contact@company.com</p>
+              </li>
+              <li class="flex flex-col sm:flex-row gap-2">
+                <i class="ph-phone text-xl text-white inline-block mx-auto sm:mx-0 sm:mt-[2px]"></i>
+                <p class="text-base text-white/60 font-mulish w-[calc(100%-20px)] truncate">(414) 687 - 5892</p>
+              </li>
+              <li class="flex flex-col sm:flex-row gap-2">
+                <i class="ph-map-pin text-xl text-white inline-block mx-auto sm:mx-0 sm:mt-[2px]"></i>
+                <p class="text-base text-white/60 font-mulish w-[calc(100%-20px)] truncate">794 Mcallister St <br> Knoxville, TN</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer-top end -->
+
+    <!-- footer-bottom start -->
+    <section class="footer-bottom">
+      <div class="container">
+        <div class="flex flex-col md:flex-row items-center justify-between border-t border-white/20 md:pt-6">
+          <p class="text-white/60 text-sm md:text-base lg:text-lg leading-8 font-mulish">Copyright © 2022 Medico</p>
+          <p class="text-white/60 text-sm md:text-base lg:text-lg leading-8 font-mulish text-center md:text-left pt-2 md:pt-0">All Rights Reserved | <a href="#!" class="inline-block underline hover:underline">Terms and Conditions</a> | <a href="#!" class="inline-block underline hover:underline">Privacy Policy</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- footer-bottom end -->
+  </footer>
+  <!-- footer end -->
+
+  <script src="./../src/js/jquery-3.6.1.min.js"></script>
+  <script src="./../src/js/jquery.magnific-popup.min.js"></script>
+  <script src="./../src/js/select2.min.js"></script>
+  <script src="./../src/js/script.js"></script>
+</body>
+</html>
