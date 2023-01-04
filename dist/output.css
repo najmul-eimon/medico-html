@@ -858,10 +858,6 @@ video {
   width: 2.75rem;
 }
 
-.w-\[482px\]{
-  width: 482px;
-}
-
 .\!w-\[482px\]{
   width: 482px !important;
 }
@@ -2077,9 +2073,18 @@ a:focus {
   background-color: rgb(4 90 181 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-secondary\/10:hover{
+  background-color: rgb(4 90 181 / 0.1);
+}
+
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-secondary:hover{
+  --tw-text-opacity: 1;
+  color: rgb(4 90 181 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{
@@ -2103,6 +2108,11 @@ a:focus {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.active\:text-secondary:active{
+  --tw-text-opacity: 1;
+  color: rgb(4 90 181 / var(--tw-text-opacity));
+}
+
 .disabled\:text-\[\#cccccc\]:disabled{
   --tw-text-opacity: 1;
   color: rgb(204 204 204 / var(--tw-text-opacity));
@@ -2119,6 +2129,19 @@ a:focus {
 .group:hover .group-hover\:bg-\[\#E5F2FF\]{
   --tw-bg-opacity: 1;
   background-color: rgb(229 242 255 / var(--tw-bg-opacity));
+}
+
+.peer\/search:focus ~ .peer-focus\/search\:border-secondary\/20{
+  border-color: rgb(4 90 181 / 0.2);
+}
+
+.peer:focus ~ .peer-focus\:border-secondary\/20{
+  border-color: rgb(4 90 181 / 0.2);
+}
+
+.peer:focus ~ .peer-focus\:border-secondary{
+  --tw-border-opacity: 1;
+  border-color: rgb(4 90 181 / var(--tw-border-opacity));
 }
 
 @media (min-width: 640px){
