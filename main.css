@@ -121,6 +121,31 @@ a:focus {
   animation-iteration-count: infinite;
 }
 
+/* custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-moz-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #F4F4F4;
+}
+
+.custom-scrollbar::-moz-scrollbar-track {
+  background-color: #F4F4F4;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.custom-scrollbar::-moz-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 /* navbar css */
 .nav-link.active {
   @apply text-secondary;
@@ -168,24 +193,16 @@ a:focus {
 }
 
 .select2-container .select2-selection--single{
-  height: 44px;
+  @apply h-11;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered{
-  color: rgba(0, 0, 0, 0.8);
+  @apply text-black/80 pl-6 pr-6 text-sm font-semibold;
   line-height: 44px;
-  padding-left: 24px;
-  padding-right: 24px;
-  font-size: 14px;
-  font-weight: 600;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow{
-  width: 20px;
-  height: 20px;
-  right: 24px;
-  top: 50%;
-  transform: translateY(-50%);
+  @apply w-5 h-5 right-6 top-1/2 -translate-y-1/2 flex items-center justify-center;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b{
@@ -201,14 +218,11 @@ a:focus {
 }
 
 .select2-search--dropdown {
-  display: none;
+  @apply hidden;
 }
 
 .select2-results__option {
-  padding: 12px 24px;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 500;
+  @apply px-6 py-3 text-sm text-black/80 font-medium;
 }
 
 .select2-dropdown {
@@ -224,6 +238,11 @@ a:focus {
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
   background-color: rgba(4, 90, 181, 0.1);
   color: rgba(0, 0, 0, 0.8);
+}
+
+.select2-container--open .select2-selection--single .select2-selection__arrow{
+  -webkit-transform: translateY(-50%) rotate(180deg) !important;
+  transform: translateY(-50%) rotate(180deg) !important;
 }
 
 .select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar {
@@ -248,4 +267,14 @@ a:focus {
 
 .select2-container--default .select2-results>.select2-results__options::-moz-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.5);
+}
+
+/* paginatioin */
+.pagination ul li .active{
+  @apply bg-secondary border-secondary text-white;
+}
+
+/* blog */
+.blog-filter-btns .active{
+  @apply bg-secondary/10 text-secondary;
 }

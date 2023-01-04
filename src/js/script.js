@@ -62,5 +62,9 @@ $(function(){
   $(document).ready(function() {
     $('.filter-select').select2();
   });
+
+  $('.search-blog-btn').on('click', function(){
+    $('.search-blog-input').toggleClass('!w-[482px] pr-4');
+  });
   
 })

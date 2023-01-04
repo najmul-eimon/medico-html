@@ -64,15 +64,17 @@
   <!-- main start -->
   <main class="mt-9 sm:mt-[55px] lg:mt-[67px] xl:mt-[83px]">
     <!-- all doctors start -->
-    <section class="all-doctors pt-10 lg:pt-16 pb-10">
+    <section class="all-doctors pt-6 lg:pt-16 pb-6 lg:pb-10">
       <div class="container">
-        <div class="flex items-center gap-6">
-          <div class="w-1/2">
+
+        <!-- search -->
+        <div class="grid grid-cols-12 items-center gap-6">
+          <div class="col-span-12 lg:col-span-4 xl:col-span-6">
             <label for="search">
               <input type="text" placeholder="Search by name" class="w-full border border-secondary/10 border-solid h-11 px-6 outline-none rounded-md text-sm text-primary-text font-semibold placeholder:text-sm placeholder:text-black/40 placeholder:font-semibold">
             </label>
           </div>
-          <div class="w-1/4">
+          <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3">
             <select class="filter-select w-full">
               <option value="0">Location</option>
               <option value="dallas">Dallas</option>
@@ -81,7 +83,7 @@
               <option value="san diego">San Diego</option>
             </select>
           </div>
-          <div class="w-1/4">
+          <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3">
             <select class="filter-select w-full">
               <option value="0">Department</option>
               <option value="cardiology">Cardiology</option>
@@ -91,6 +93,248 @@
               <option value="digestive">Digestive</option>
             </select>
           </div>
+        </div>
+
+        <!-- doctors -->
+        <div class="mt-12 lg:mt-16 mb-4 lg:mb-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 md:gap-y-12">
+          <!-- item 1 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-6 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)] h-fit hover:shadow hover:shadow-[rgba(4,90,181,0.08)] transition-all duration-300">
+            <!-- image -->
+            <div class="h-[100px] w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img2.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl xl:text-2xl xl:leading-9 font-semibold text-secondary">Dr. Maverick Ludeman</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-2">Cardiologist</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="./single-doctor.html" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+          <!-- item 2 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-6 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)] h-fit hover:shadow hover:shadow-[rgba(4,90,181,0.08)] transition-all duration-300">
+            <!-- image -->
+            <div class="h-[100px] w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img1.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl xl:text-2xl xl:leading-9 font-semibold text-secondary">Dr. Lane Toki</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-2">General Surgery</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="./single-doctor.html" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+          <!-- item 3 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-6 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)] h-fit hover:shadow hover:shadow-[rgba(4,90,181,0.08)] transition-all duration-300">
+            <!-- image -->
+            <div class="h-[100px] w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img3.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl xl:text-2xl xl:leading-9 font-semibold text-secondary">Dr. Reese Blom</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-2">Psychiatry</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="./single-doctor.html" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+          <!-- item 4 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-6 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)] h-fit hover:shadow hover:shadow-[rgba(4,90,181,0.08)] transition-all duration-300">
+            <!-- image -->
+            <div class="h-[100px] w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img4.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl xl:text-2xl xl:leading-9 font-semibold text-secondary">Dr. Dylan Scroger</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-2">Medicine</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="./single-doctor.html" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+          <!-- item 5 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-6 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)] h-fit hover:shadow hover:shadow-[rgba(4,90,181,0.08)] transition-all duration-300">
+            <!-- image -->
+            <div class="h-[100px] w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img5.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl xl:text-2xl xl:leading-9 font-semibold text-secondary">Dr. Kendrick</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-2">Physology</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="./single-doctor.html" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+          <!-- item 6 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-6 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)] h-fit hover:shadow hover:shadow-[rgba(4,90,181,0.08)] transition-all duration-300">
+            <!-- image -->
+            <div class="h-[100px] w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img6.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl xl:text-2xl xl:leading-9 font-semibold text-secondary">Dr. Johnny Lucer</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-2">Cardiologist</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="./single-doctor.html" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+          <!-- item 7 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-6 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)] h-fit hover:shadow hover:shadow-[rgba(4,90,181,0.08)] transition-all duration-300">
+            <!-- image -->
+            <div class="h-[100px] w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img7.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl xl:text-2xl xl:leading-9 font-semibold text-secondary">Dr. Autumn Mangino</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-2">Orthopaedics</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="./single-doctor.html" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+          <!-- item 8 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-6 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)] h-fit hover:shadow hover:shadow-[rgba(4,90,181,0.08)] transition-all duration-300">
+            <!-- image -->
+            <div class="h-[100px] w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img8.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl xl:text-2xl xl:leading-9 font-semibold text-secondary">Dr. Braden Bluth</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-2">General Surgery</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="./single-doctor.html" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+          <!-- item 9 -->
+          <div class="rounded-[15px] bg-[#FDFEFF] px-6 py-3 text-center shadow-[0px_8px_24px_rgba(4,90,181,0.08)] h-fit hover:shadow hover:shadow-[rgba(4,90,181,0.08)] transition-all duration-300">
+            <!-- image -->
+            <div class="h-[100px] w-[100px] rounded-full overflow-hidden mx-auto mb-2">
+              <img src="../src/images/doctors/img9.png" class="w-full" alt="Doctor Image">
+            </div>
+            <h4 class="text-xl xl:text-2xl xl:leading-9 font-semibold text-secondary">Dr. Carrie Schinner</h4>
+            <p class="text-sm lg:text-base text-primary-text/60 py-2">Ear, Nose and Throat</p>
+            <p class="text-sm font-medium text-primary-text/60 flex items-center gap-[6px] justify-center"><i class="ph-phone text-lg flex-shrink-0"></i> +1 888 215 365</p>
+
+            <ul class="flex flex-wrap items-center justify-center gap-2 my-6">
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FRCP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FACP</span></li>
+              <li><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">MBBS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">FCPS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BAMS</span></li>
+              <li class="qualification hidden"><span class="inline-block text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-secondary rounded-3xl border border-secondary">BDS</span></li>
+              <li><button type="button" class="qualification-more text-center w-[41px] lg:w-[46px] xl:w-16 2xl:w-[67px] py-[5px] text-xs text-white rounded-3xl border border-secondary bg-secondary">3+</button></li>
+            </ul>
+
+            <p class="text-sm text-primary-text/60 pb-6">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used</p>
+            <a href="./single-doctor.html" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">View Profile</a>
+          </div>
+
+        </div>
+
+        <!-- pagination -->
+        <div class="text-center pagination">
+          <ul class="flex items-center justify-center gap-[5px]">
+            <li><button disabled class="inline-block py-[6px] px-1 text-[13px] font-medium text-[#333333] disabled:text-[#cccccc]">Prev</button></li>
+            <li><a href="#!" class="active box-border inline-block h-8 w-8 rounded-lg border border-[#F1F1F1] bg-white text-center leading-8 text-[13px] font-medium text-[#333333]">1</a></li>
+            <li><a href="#!" class="box-border inline-block h-8 w-8 rounded-lg border border-[#F1F1F1] bg-white text-center leading-8 text-[13px] font-medium text-[#333333]">2</a></li>
+            <li><a href="#!" class="box-border inline-block h-8 w-8 rounded-lg border border-[#F1F1F1] bg-white text-center leading-8 text-[13px] font-medium text-[#333333]">3</a></li>
+            <li><span class="box-border inline-block h-8 w-8 rounded-lg bg-white text-center leading-8 text-[13px] font-medium text-[#333333]">...</span></li>
+            <li><a href="#!" class="box-border inline-block h-8 w-8 rounded-lg border border-[#F1F1F1] bg-white text-center leading-8 text-[13px] font-medium text-[#333333]">10</a></li>
+            <li><button class="inline-block py-[6px] px-1 text-[13px] font-medium text-[#333333]">Next</button></li>
+          </ul>
         </div>
       </div>
     </section>
