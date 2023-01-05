@@ -146,6 +146,16 @@ a:focus {
   background: rgba(0, 0, 0, 0.5);
 }
 
+/* scrollbar hide */
+.scrollbar-hidden::-webkit-scrollbar{
+  display: none;
+  width: 0;
+  scrollbar-width: none;
+}
+.scrollbar-hidden{
+  scrollbar-width: none;
+}
+
 /* navbar css */
 .nav-link.active {
   @apply text-secondary;
@@ -275,6 +285,6 @@ a:focus {
 }
 
 /* blog */
-.blog-filter-btns .active{
+.blog-filter-btns .active button{
   @apply bg-secondary/10 text-secondary;
 }
