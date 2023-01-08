@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./../src/images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="./../src/css/all.min.css">
+  <link rel="stylesheet" href="./../src/css/select2.min.css">
+  <link rel="stylesheet" href="./../src/css/select-dropdown.css">
+  <link rel="stylesheet" href="./../src/css/magnific-popup.css">
+  <link rel="stylesheet" href="./../src/css/jquery.datetimepicker.css">
+  <link rel="stylesheet" href="./../src/css/datetimepicker.css">
+  <link rel="stylesheet" href="./../dist/output.css">
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <title>Medico | Appointment</title>
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="py-2 xl:py-4 w-full fixed left-0 top-0 z-40 bg-white/40 backdrop-blur shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <!-- logo -->
+        <a href="./../index.html" class="inline-block w-[75px] sm:w-[150px] lg:w-auto">
+          <img src="./../src/images/logo.png" alt="Logo">
+        </a>
+
+        <div>
+          <!-- mobile screen overlay -->
+          <div class="mobile-overlay transition-all ease-linear duration-500 h-screen w-full bg-black/30 fixed inset-0 opacity-0 invisible z-40 lg:hidden"></div>
+
+          <!-- mobile menu toggle button -->
+          <button type="button" class="menu-toggle h-5 w-5 flex items-center justify-center lg:hidden">
+            <img src="./../src/images/svg/menu.svg" alt="Logo">
+          </button>
+
+          <div class="mobile-menu transition-all ease-linear duration-500 h-screen lg:h-auto w-[320px] lg:w-auto bg-white lg:bg-transparent fixed z-50 lg:static top-0 -left-[320px] p-4 lg:p-0 overflow-y-auto lg:overscroll-none shadow lg:shadow-none">
+            <!-- close menu button -->
+            <button type="button" class="close-menu h-8 w-8 bg-secondary rounded-full flex items-center justify-center absolute top-3 right-3 lg:hidden">
+              <i class="ph-x text-white"></i>
+            </button>
+
+            <!-- mobile screen logo -->
+            <a href="./../index.html" class="inline-block mb-6 w-36 lg:hidden">
+              <img src="./../src/images/logo.png" alt="Logo">
+            </a>
+
+            <!-- menu items -->
+            <ul class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-7">
+              <li><a href="./../index.html" class="nav-link inlione-block text-base text-primary-text">Home</a></li>
+              <li><a href="./about.html" class="nav-link inlione-block text-base text-primary-text">About</a></li>
+              <li><a href="./service.html" class="nav-link inlione-block text-base text-primary-text">Services</a></li>
+              <li><a href="./doctors.html" class="nav-link inlione-block text-base text-primary-text">Doctors</a></li>
+              <li><a href="./blog.html" class="nav-link inlione-block text-base text-primary-text">Blog</a></li>
+              <li><a href="#!" class="inline-block py-3 px-12 border border-secondary/20 bg-secondary/10 text-sm font-semibold text-secondary rounded-md">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- main start -->
+  <main class="mt-9 sm:mt-[55px] lg:mt-[67px] xl:mt-[83px]">
+    <!-- appointment start -->
+    <section class="appointment py-10 lg:py-20">
+      <div class="container">
+        <div class="grid grid-cols-4 gap-6">
+          <!-- left part -->
+          <div class="rounded-lg overflow-hidden bg-white shadow-[4px_4px_20px_rgba(0,0,0,0.08),-4px_-4px_20px_rgba(0,0,0,0.08)] p-4">
+            <!-- tab list -->
+            <ul class="space-y-4 tab-list" id="progressbar">
+              <!-- tab item 1 -->
+              <li class="active pl-9 relative min-h-[70px] after:content after:h-[calc(100%-32px)] after:w-[1px] after:rounded-md after:bg-primary-text/40 after:absolute after:left-[10px] after:bottom-0">
+                <span class="h-5 w-5 rounded-full bg-primary absolute top-1 left-0 flex items-center justify-center">
+                  <img src="../src/images/svg/checkmark.svg" alt="Checkmark" class="checkmark hidden">
+                  <span class="check-dot h-[6px] w-[6px] rounded-full bg-white"></span>
+                </span>
+                <h5 class="text-base text-primary-text font-semibold pb-1">Select Clinic</h5>
+                <p class="text-sm text-primary-text/60">Please Select a nearest clinic from your location</p>
+              </li>
+
+              <!-- tab item 2 -->
+              <li class="pl-9 relative min-h-[70px] after:content after:h-[calc(100%-32px)] after:w-[1px] after:rounded-md after:bg-primary-text/40 after:absolute after:left-[10px] after:bottom-0">
+                <span class="h-5 w-5 rounded-full bg-primary absolute top-1 left-0 flex items-center justify-center">
+                  <img src="../src/images/svg/checkmark.svg" alt="Checkmark" class="checkmark hidden">
+                  <span class="check-dot h-[6px] w-[6px] rounded-full bg-white"></span>
+                </span>
+                <h5 class="text-base text-primary-text font-semibold pb-1">Select Department</h5>
+                <p class="text-sm text-primary-text/60">Please Select a department for patient</p>
+              </li>
+
+              <!-- tab item 3 -->
+              <li class="pl-9 relative min-h-[70px] after:content after:h-[calc(100%-32px)] after:w-[1px] after:rounded-md after:bg-primary-text/40 after:absolute after:left-[10px] after:bottom-0">
+                <span class="h-5 w-5 rounded-full bg-primary absolute top-1 left-0 flex items-center justify-center">
+                  <img src="../src/images/svg/checkmark.svg" alt="Checkmark" class="checkmark hidden">
+                  <span class="check-dot h-[6px] w-[6px] rounded-full bg-white"></span>
+                </span>
+                <h5 class="text-base text-primary-text font-semibold pb-1">Select Doctor</h5>
+                <p class="text-sm text-primary-text/60">Please select a specilist doctor from the list</p>
+              </li>
+
+              <!-- tab item 4 -->
+              <li class="pl-9 relative min-h-[70px] after:content after:h-[calc(100%-32px)] after:w-[1px] after:rounded-md after:bg-primary-text/40 after:absolute after:left-[10px] after:bottom-0">
+                <span class="h-5 w-5 rounded-full bg-primary absolute top-1 left-0 flex items-center justify-center">
+                  <img src="../src/images/svg/checkmark.svg" alt="Checkmark" class="checkmark hidden">
+                  <span class="check-dot h-[6px] w-[6px] rounded-full bg-white"></span>
+                </span>
+                <h5 class="text-base text-primary-text font-semibold pb-1">Select Date & Time</h5>
+                <p class="text-sm text-primary-text/60">Please Select date and time for appointment</p>
+              </li>
+
+              <!-- tab item 5 -->
+              <li class="pl-9 relative min-h-[70px] after:content after:h-[calc(100%-32px)] after:w-[1px] after:rounded-md after:bg-primary-text/40 after:absolute after:left-[10px] after:bottom-0">
+                <span class="h-5 w-5 rounded-full bg-primary absolute top-1 left-0 flex items-center justify-center">
+                  <img src="../src/images/svg/checkmark.svg" alt="Checkmark" class="checkmark hidden">
+                  <span class="check-dot h-[6px] w-[6px] rounded-full bg-white"></span>
+                </span>
+                <h5 class="text-base text-primary-text font-semibold pb-1">Description</h5>
+                <p class="text-sm text-primary-text/60">Please write patient’s problems and syndromes</p>
+              </li>
+
+              <!-- tab item 6 -->
+              <li class="pl-9 relative min-h-[70px] after:content after:h-[calc(100%-32px)] after:w-[1px] after:rounded-md after:bg-primary-text/40 after:absolute after:left-[10px] after:bottom-0">
+                <span class="h-5 w-5 rounded-full bg-primary absolute top-1 left-0 flex items-center justify-center">
+                  <img src="../src/images/svg/checkmark.svg" alt="Checkmark" class="checkmark hidden">
+                  <span class="check-dot h-[6px] w-[6px] rounded-full bg-white"></span>
+                </span>
+                <h5 class="text-base text-primary-text font-semibold pb-1">Patient Details</h5>
+                <p class="text-sm text-primary-text/60">Please fill all field with patient informations</p>
+              </li>
+
+              <!-- tab item 7 -->
+              <li class="pl-9 relative min-h-[70px]">
+                <span class="h-5 w-5 rounded-full bg-primary absolute top-1 left-0 flex items-center justify-center">
+                  <img src="../src/images/svg/checkmark.svg" alt="Checkmark" class="hidden">
+                  <span class="h-[6px] w-[6px] rounded-full bg-white"></span>
+                </span>
+                <h5 class="text-base text-primary-text font-semibold pb-1">Confirmation</h5>
+                <p class="text-sm text-primary-text/60">Confirm appointment</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- right-part -->
+          <div class="col-span-3 border border-solid border-black/10 rounded-lg p-4">
+            <!-- tab 1 content -->
+            <div class="single-content card2 show relative h-full w-full flex flex-col justify-between">
+              <!-- title -->
+              <div class="flex items-center flex-shrink-0 justify-between pb-4 border-b border-black/10 mb-6">
+                <div>
+                  <h5 class="text-base font-semibold text-primary-text pb-1">Select Clinic</h5>
+                  <p class="text-xs text-primary-text/60">Select your nearest clinic</p>
+                </div>
+                <input type="text" placeholder="search by name" class="h-10 w-[400px] px-[10px] rounded-[5px] border border-solid border-black/10 bg-white text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+              </div>
+
+              <!-- content -->
+              <div class="grid grid-cols-4 gap-6 flex-grow">
+                <!-- clinic 1 -->
+                <div class="clinic-select">
+                  <label for="clinic1" class="cursor-pointer">
+                    <input type="radio" name="clinics" id="clinic1" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative rounded-[10px] overflow-hidden bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.1)] clinic-location">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <div class="rounded-[10px] rounded-bl-none overflow-hidden">
+                        <img src="../src/images/location/clinic1.jpg" class="w-full" alt="Location">
+                      </div>
+                      <div class="mt-[10px] p-[10px] text-center">
+                        <h4 class="text-base font-semibold text-primary-text">Kindred Soul Medical Clinic</h4>
+                        <p class="pt-[10px] text-sm text-primary-text/60">9020 Garland Rd, Dallas TX 75218, USA</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- clinic 2 -->
+                <div class="clinic-select">
+                  <label for="clinic2" class="cursor-pointer">
+                    <input type="radio" name="clinics" id="clinic2" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative rounded-[10px] overflow-hidden bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.1)] clinic-location">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <div class="rounded-[10px] rounded-bl-none overflow-hidden">
+                        <img src="../src/images/location/clinic2.jpg" class="w-full" alt="Location">
+                      </div>
+                      <div class="mt-[10px] p-[10px] text-center">
+                        <h4 class="text-base font-semibold text-primary-text">Kindred Soul Medical Clinic</h4>
+                        <p class="pt-[10px] text-sm text-primary-text/60">9020 Garland Rd, Dallas TX 75218, USA</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- clinic 3 -->
+                <div class="clinic-select">
+                  <label for="clinic3" class="cursor-pointer">
+                    <input type="radio" name="clinics" id="clinic3" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative rounded-[10px] overflow-hidden bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.1)] clinic-location">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <div class="rounded-[10px] rounded-bl-none overflow-hidden">
+                        <img src="../src/images/location/clinic3.jpg" class="w-full" alt="Location">
+                      </div>
+                      <div class="mt-[10px] p-[10px] text-center">
+                        <h4 class="text-base font-semibold text-primary-text">Kindred Soul Medical Clinic</h4>
+                        <p class="pt-[10px] text-sm text-primary-text/60">9020 Garland Rd, Dallas TX 75218, USA</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- clinic 4 -->
+                <div class="clinic-select">
+                  <label for="clinic4" class="cursor-pointer">
+                    <input type="radio" name="clinics" id="clinic4" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative rounded-[10px] overflow-hidden bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.1)] clinic-location">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <div class="rounded-[10px] rounded-bl-none overflow-hidden">
+                        <img src="../src/images/location/clinic4.jpg" class="w-full" alt="Location">
+                      </div>
+                      <div class="mt-[10px] p-[10px] text-center">
+                        <h4 class="text-base font-semibold text-primary-text">Kindred Soul Medical Clinic</h4>
+                        <p class="pt-[10px] text-sm text-primary-text/60">9020 Garland Rd, Dallas TX 75218, USA</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- buttons -->
+              <div class="flex items-center justify-end gap-4 w-full flex-shrink-0 mt-6">
+                <button type="button" class="next-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#084C94]">Next</button>
+              </div>
+            </div>
+
+            <!-- tab 2 content -->
+            <div class="single-content card2 relative h-full w-full flex flex-col justify-between">
+              <!-- title -->
+              <div class="flex items-center justify-between flex-shrink-0 pb-4 border-b border-black/10 mb-6">
+                <div>
+                  <h5 class="text-base font-semibold text-primary-text pb-1">Select Department</h5>
+                  <p class="text-xs text-primary-text/60">Select one department</p>
+                </div>
+                <input type="text" placeholder="search by name" class="h-10 w-[400px] px-[10px] rounded-[5px] border border-solid border-black/10 bg-white text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+              </div>
+
+              <!-- content -->
+              <div class="flex items-start justify-center flex-wrap gap-6 flex-grow">
+                <!-- department 1 -->
+                <div class="department-select">
+                  <label for="department1" class="cursor-pointer">
+                    <input type="radio" name="departments" id="department1" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative w-[180px] h-[180px] rounded-lg overflow-hidden bg-white single-department border border-secondary/10 flex items-center justify-center">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <div>
+                        <span class="h-20 w-20 flex items-center justify-center mx-auto">
+                          <img src="../src/images/svg/cardiology.svg" alt="cardiology">
+                        </span>
+                        <h4 class="pt-2 text-base font-medium text-primary-text">Cardiology</h4>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- department 2 -->
+                <div class="department-select">
+                  <label for="department2" class="cursor-pointer">
+                    <input type="radio" name="departments" id="department2" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative w-[180px] h-[180px] rounded-lg overflow-hidden bg-white single-department border border-secondary/10 flex items-center justify-center">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <div>
+                        <span class="h-20 w-20 flex items-center justify-center mx-auto">
+                          <img src="../src/images/svg/neuro-science.svg" alt="cardiology">
+                        </span>
+                        <h4 class="pt-2 text-base font-medium text-primary-text">Neuro Science</h4>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- department 3 -->
+                <div class="department-select">
+                  <label for="department3" class="cursor-pointer">
+                    <input type="radio" name="departments" id="department3" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative w-[180px] h-[180px] rounded-lg overflow-hidden bg-white single-department border border-secondary/10 flex items-center justify-center">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <div>
+                        <span class="h-20 w-20 flex items-center justify-center mx-auto">
+                          <img src="../src/images/svg/kidney.svg" alt="cardiology">
+                        </span>
+                        <h4 class="pt-2 text-base font-medium text-primary-text">Kidney & Urology</h4>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- department 4 -->
+                <div class="department-select">
+                  <label for="department4" class="cursor-pointer">
+                    <input type="radio" name="departments" id="department4" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative w-[180px] h-[180px] rounded-lg overflow-hidden bg-white single-department border border-secondary/10 flex items-center justify-center">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <div>
+                        <span class="h-20 w-20 flex items-center justify-center mx-auto">
+                          <img src="../src/images/svg/medicine.svg" alt="cardiology">
+                        </span>
+                        <h4 class="pt-2 text-base font-medium text-primary-text">Medicine</h4>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- department 5 -->
+                <div class="department-select">
+                  <label for="department5" class="cursor-pointer">
+                    <input type="radio" name="departments" id="department5" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative w-[180px] h-[180px] rounded-lg overflow-hidden bg-white single-department border border-secondary/10 flex items-center justify-center">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <div>
+                        <span class="h-20 w-20 flex items-center justify-center mx-auto">
+                          <img src="../src/images/svg/gastroenterology.svg" alt="cardiology">
+                        </span>
+                        <h4 class="pt-2 text-base font-medium text-primary-text">Gastroenterology</h4>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- buttons -->
+              <div class="flex items-center justify-end gap-4 w-full flex-shrink-0 mt-6">
+                <button type="button" class="prev-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#DB3E4D]">Back</button>
+                <button type="button" class="next-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#084C94]">Next</button>
+              </div>
+            </div>
+
+            <!-- tab 3 content -->
+            <div class="single-content card2 relative h-full w-full flex flex-col justify-between">
+              <!-- title -->
+              <div class="flex items-center justify-between flex-shrink-0 pb-4 border-b border-black/10 mb-6">
+                <div>
+                  <h5 class="text-base font-semibold text-primary-text pb-1">Select Doctor</h5>
+                  <p class="text-xs text-primary-text/60">Select one doctor</p>
+                </div>
+                <input type="text" placeholder="search by name" class="h-10 w-[400px] px-[10px] rounded-[5px] border border-solid border-black/10 bg-white text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+              </div>
+
+              <!-- content -->
+              <div class="grid grid-cols-4 gap-6 flex-grow">
+                <!-- doctor 1 -->
+                <div class="doctor-select">
+                  <label for="doctor1" class="cursor-pointer">
+                    <input type="radio" name="doctors" id="doctor1" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative single-doctor rounded-[10px] overflow-hidden shadow-[0px_0px_20px_rgba(0,0,0,0.1)]">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <!-- image -->
+                      <div class="rounded-[10px] overflow-hidden">
+                        <img src="../src/images/doctors/doctor1.jpg" class="w-full" alt="Doctor">
+                      </div>
+                      <!-- name -->
+                      <div class="p-[10px]">
+                        <h5 class="pb-1 text-base font-semibold text-primary-text">Foster Childes Kase</h5>
+                        <p class="text-sm text-primary-text/40">Dermatology specialist</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- doctor 2 -->
+                <div class="doctor-select">
+                  <label for="doctor2" class="cursor-pointer">
+                    <input type="radio" name="doctors" id="doctor2" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative single-doctor rounded-[10px] overflow-hidden shadow-[0px_0px_20px_rgba(0,0,0,0.1)]">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <!-- image -->
+                      <div class="rounded-[10px] overflow-hidden">
+                        <img src="../src/images/doctors/doctor2.jpg" class="w-full" alt="Doctor">
+                      </div>
+                      <!-- name -->
+                      <div class="p-[10px]">
+                        <h5 class="pb-1 text-base font-semibold text-primary-text">Foster Childes Kase</h5>
+                        <p class="text-sm text-primary-text/40">Dermatology specialist</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- doctor 3 -->
+                <div class="doctor-select">
+                  <label for="doctor3" class="cursor-pointer">
+                    <input type="radio" name="doctors" id="doctor3" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative single-doctor rounded-[10px] overflow-hidden shadow-[0px_0px_20px_rgba(0,0,0,0.1)]">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <!-- image -->
+                      <div class="rounded-[10px] overflow-hidden">
+                        <img src="../src/images/doctors/doctor3.jpg" class="w-full" alt="Doctor">
+                      </div>
+                      <!-- name -->
+                      <div class="p-[10px]">
+                        <h5 class="pb-1 text-base font-semibold text-primary-text">Foster Childes Kase</h5>
+                        <p class="text-sm text-primary-text/40">Dermatology specialist</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- doctor 4 -->
+                <div class="doctor-select">
+                  <label for="doctor4" class="cursor-pointer">
+                    <input type="radio" name="doctors" id="doctor4" class="absolute opacity-0 h-0 w-0">
+                    <div class="relative single-doctor rounded-[10px] overflow-hidden shadow-[0px_0px_20px_rgba(0,0,0,0.1)]">
+                      <img src="../src/images/svg/active-check.svg" class="absolute top-4 right-4 z-10 hidden active-check-mark" alt="Active Check mark">
+                      <!-- image -->
+                      <div class="rounded-[10px] overflow-hidden">
+                        <img src="../src/images/doctors/doctor4.jpg" class="w-full" alt="Doctor">
+                      </div>
+                      <!-- name -->
+                      <div class="p-[10px]">
+                        <h5 class="pb-1 text-base font-semibold text-primary-text">Foster Childes Kase</h5>
+                        <p class="text-sm text-primary-text/40">Dermatology specialist</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- buttons -->
+              <div class="flex items-center justify-end gap-4 w-full flex-shrink-0 mt-6">
+                <button type="button" class="prev-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#DB3E4D]">Back</button>
+                <button type="button" class="next-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#084C94]">Next</button>
+              </div>
+            </div>
+
+            <!-- tab 4 content -->
+            <div class="single-content card2 relative h-full w-full flex flex-col justify-between">
+              <!-- title -->
+              <div class="flex items-center justify-between flex-shrink-0 pb-4 border-b border-black/10 mb-6">
+                <div>
+                  <h5 class="text-base font-semibold text-primary-text pb-1">Select Date & Time</h5>
+                  <p class="text-xs text-primary-text/60">Select available date and time</p>
+                </div>
+                <input type="text" placeholder="search by name" class="h-10 w-[400px] px-[10px] rounded-[5px] border border-solid border-black/10 bg-white text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+              </div>
+
+              <!-- content -->
+              <div class="flex-grow">
+                <input type="text" id="demo"/>
+              </div>
+
+              <!-- buttons -->
+              <div class="flex items-center justify-end gap-4 w-full flex-shrink-0 mt-6">
+                <button type="button" class="prev-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#DB3E4D]">Back</button>
+                <button type="button" class="next-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#084C94]">Next</button>
+              </div>
+            </div>
+
+            <!-- tab 5 content -->
+            <div class="single-content card2 relative h-full w-full flex flex-col justify-between">
+              <!-- title -->
+              <div class="flex-shrink-0 pb-4 border-b border-black/10 mb-6">
+                <h5 class="text-base font-semibold text-primary-text pb-1">Descriptions</h5>
+                <p class="text-xs text-primary-text/60">In any thing you want to brief before the meet and any thing you want to share any report</p>
+              </div>
+
+              <!-- content -->
+              <div class="flex-grow">
+                <div class="pb-6">
+                  <h5 class="text-base font-semibold text-primary-text pb-4">Appointment Descriptions</h5>
+                  <textarea class="p-[10px] w-full h-[120px] rounded-lg border border-black/20 resize-none text-base text-primary-text placeholder:text-primary-text/40 placeholder:text-base outline-none" placeholder="Descriptions"></textarea>
+                </div>
+                <div>
+                  <h5 class="text-base font-semibold text-primary-text pb-4">Add Medical Report</h5>
+                  <label for="file" class="file-label w-full h-[120px] border border-dashed border-black/20 flex items-center justify-center rounded-lg cursor-pointer">
+                    <span class="flex items-center justify-center gap-[10px] text-sm text-primary-text/40">
+                      <i class="ph-cloud-arrow-up text-2xl text-primary-text/40"></i>
+                      Upload
+                    </span>
+                  </label>
+                  <p class="choosen pt-3 text-sm text-primary-text/60"></p>
+                  <input type="file" id="file" class="absolute opacity-0 h-0 w-0">
+                </div>
+              </div>
+
+              <!-- buttons -->
+              <div class="flex items-center justify-end gap-4 w-full flex-shrink-0 mt-6">
+                <button type="button" class="prev-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#DB3E4D]">Back</button>
+                <button type="button" class="next-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#084C94]">Next</button>
+              </div>
+            </div>
+
+            <!-- tab 6 content -->
+            <div class="single-content card2 relative h-full w-full flex flex-col justify-between">
+              <!-- title -->
+              <div class="flex-shrink-0 pb-4 border-b border-black/10 mb-6">
+                <h5 class="text-base font-semibold text-primary-text pb-1">Details</h5>
+                <p class="text-xs text-primary-text/60">Register if your new, otherwise just login</p>
+              </div>
+
+              <!-- content -->
+              <div class="flex-grow">
+                <ul id="tabs-nav" class="flex items-center justify-center mb-6 gap-6">
+                  <li>
+                    <a href="#tab1" class="inline-block w-[100px] rounded-[5px] text-center text-secondary leading-[33px] border border-solid border-secondary/20 bg-white text-sm font-semibold">Register</a>
+                  </li>
+                  <li>
+                    <a href="#tab2" class="inline-block w-[100px] rounded-[5px] text-center text-secondary leading-[33px] border border-solid border-secondary/20 bg-white text-sm font-semibold">Log in</a>
+                  </li>
+                </ul>
+
+                <div id="tab1" class="tab-content">
+                  <div class="grid grid-cols-2 gap-6">
+                    <!-- first name -->
+                    <div>
+                      <label for="fname" class="block mb-2 text-base font-semibold text-primary-text">First Name</label>
+                      <input type="text" id="fname" placeholder="First Name" class="outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+                    </div>
+
+                    <!-- last name -->
+                    <div>
+                      <label for="lname" class="block mb-2 text-base font-semibold text-primary-text">Last Name</label>
+                      <input type="text" id="lname" placeholder="Last Name" class="outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+                    </div>
+
+                    <!-- email -->
+                    <div>
+                      <label for="email" class="block mb-2 text-base font-semibold text-primary-text">Email</label>
+                      <input type="email" id="email" placeholder="Email" class="outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                      <label for="phone" class="block mb-2 text-base font-semibold text-primary-text">Phone</label>
+                      <input type="tel" id="phone" placeholder="Phone" class="outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+                    </div>
+
+                    <!-- Age -->
+                    <div>
+                      <label for="age" class="block mb-2 text-base font-semibold text-primary-text">Age</label>
+                      <input type="text" id="age" placeholder="Age" class="outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+                    </div>
+
+                    <!-- Gender -->
+                    <div>
+                      <label for="gender" class="block mb-2 text-base font-semibold text-primary-text">Gender</label>
+                      <select class="filter-select w-full">
+                        <option value="0">Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab2" class="tab-content">tab 2</div>
+              </div>
+              
+              <!-- buttons -->
+              <div class="flex items-center justify-end gap-4 w-full flex-shrink-0 mt-6">
+                <button type="button" class="prev-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#DB3E4D]">Back</button>
+                <button type="button" class="next-button w-[130px] text-center leading-9 text-sm font-semibold text-white rounded-md bg-[#084C94]">Next</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- appointment end -->
+  </main>
+  <!-- main end -->
+
+  <!-- footer start -->
+  <footer class="bg-[#393C45] py-5 md:py-10">
+
+    <!-- footer-top start -->
+    <section class="footer-top pb-6">
+      <div class="container">
+        <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-12 gap-6">
+
+          <!-- company -->
+          <div class="sm:col-span-3 lg:col-span-4 text-center lg:text-left">
+            <a href="./../index.html" class="inline-block mx-auto lg:mx-0 w-[150px] md:w-auto">
+              <img src="./../src/images/footer-logo.png" alt="Logo">
+            </a>
+            <p class="text-white/60 text-sm md:text-base py-4 md:py-6 font-mulish">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam. Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam</p>
+            <ul class="flex items-center justify-center lg:justify-start gap-6">
+              <li><a href="#"><i class="fab fa-facebook-f text-white/60"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter text-white/60"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram text-white/60"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in text-white/60"></i></a></li>
+              <li><a href="#"><i class="fab fa-youtube text-white/60"></i></a></li>
+            </ul>
+          </div>
+
+          <!-- departments -->
+          <div class="lg:col-span-3 text-center sm:text-left">
+            <h4 class="pb-5 md:pb-10 text-white font-mulish font-bold text-base md:text-xl">Departments</h4>
+            <ul class="space-y-3 md:space-y-[18px]">
+              <li><a href="#!" class="text-base font-mulish text-white/60">Emergency</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Medicine</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Neuro Science</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Kidney & Urology</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Surgery</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Digestive</a></li>
+            </ul>
+          </div>
+
+          <!-- services -->
+          <div class="lg:col-span-2 text-center sm:text-left">
+            <h4 class="pb-5 md:pb-10 text-white font-mulish font-bold text-base md:text-xl">Services</h4>
+            <ul class="space-y-3 md:space-y-[18px]">
+              <li><a href="#!" class="text-base font-mulish text-white/60">Visit A Doctor</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Health Checkup</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Pharmacy</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Hospital</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Diagnostic</a></li>
+              <li><a href="#!" class="text-base font-mulish text-white/60">Surgery</a></li>
+            </ul>
+          </div>
+
+          <!-- contact -->
+          <div class="lg:col-span-3 text-center sm:text-left">
+            <h4 class="pb-5 md:pb-10 text-white font-mulish font-bold text-base md:text-xl">Contact us</h4>
+            <ul class="space-y-3 md:space-y-7">
+              <li class="flex flex-col sm:flex-row gap-2">
+                <i class="ph-envelope-simple text-xl text-white inline-block mx-auto sm:mx-0 sm:mt-[2px]"></i>
+                <p class="text-base text-white/60 font-mulish w-[calc(100%-20px)] truncate">contact@company.com</p>
+              </li>
+              <li class="flex flex-col sm:flex-row gap-2">
+                <i class="ph-phone text-xl text-white inline-block mx-auto sm:mx-0 sm:mt-[2px]"></i>
+                <p class="text-base text-white/60 font-mulish w-[calc(100%-20px)] truncate">(414) 687 - 5892</p>
+              </li>
+              <li class="flex flex-col sm:flex-row gap-2">
+                <i class="ph-map-pin text-xl text-white inline-block mx-auto sm:mx-0 sm:mt-[2px]"></i>
+                <p class="text-base text-white/60 font-mulish w-[calc(100%-20px)] truncate">794 Mcallister St <br> Knoxville, TN</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer-top end -->
+
+    <!-- footer-bottom start -->
+    <section class="footer-bottom">
+      <div class="container">
+        <div class="flex flex-col md:flex-row items-center justify-between border-t border-white/20 md:pt-6">
+          <p class="text-white/60 text-sm md:text-base lg:text-lg leading-8 font-mulish">Copyright © 2022 Medico</p>
+          <p class="text-white/60 text-sm md:text-base lg:text-lg leading-8 font-mulish text-center md:text-left pt-2 md:pt-0">All Rights Reserved | <a href="#!" class="inline-block underline hover:underline">Terms and Conditions</a> | <a href="#!" class="inline-block underline hover:underline">Privacy Policy</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- footer-bottom end -->
+  </footer>
+  <!-- footer end -->
+
+  <script src="./../src/js/jquery-3.6.1.min.js"></script>
+  <script src="./../src/js/jquery.datetimepicker.full.js"></script>
+  <script src="./../src/js/jquery.magnific-popup.min.js"></script>
+  <script src="./../src/js/select2.min.js"></script>
+  <script src="./../src/js/mixitup.min.js"></script>
+  <script src="./../src/js/script.js"></script>
+</body>
+</html>

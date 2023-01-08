@@ -87,5 +87,120 @@ $(function(){
       }
     });
   }
+
+  /*======================= date time picker ========================*/
+  $('#demo').datetimepicker({
+    inline:true,
+    minTime:"3pm",
+    maxTime:"11:30pm",
+    formatTime:'H:i A',
+    opened:false,
+    step: 30,
+    // hours12:true,
+    scrollMonth:false,
+    scrollTime:false,
+    monthChangeSpinner:true,
+    todayButton:false,
+  });
+
+  $('.xdsoft_timepicker').prepend('<p class="available_time">Available from 3:00 PM - 11.00 PM</p>');
+
+  $('.xdsoft_timepicker').removeClass('active');
+  $('.xdsoft_datetimepicker .xdsoft_calendar td').on('click', function(){
+    console.log('click');
+    $('.xdsoft_timepicker').addClass('active');
+  });
+    
+  /*======================= appointment multi step ========================*/
+  var current_fs, next_fs, previous_fs;
+
+  // Next button
+  $(".next-button").click(function(){
+
+  current_fs = $(this).parent().parent();
+  next_fs = $(this).parent().parent().next();
+
+  $(current_fs).removeClass("show");
+  $(next_fs).addClass("show");
+  previous_fs = $(".show").prev();
+
+  $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
+  $("#progressbar li").eq($(".card2").index(previous_fs)).addClass("checked");
+
+  current_fs.animate({}, {
+    step: function() {
+
+      current_fs.css({
+        'display': 'none',
+      });
+
+      next_fs.css({
+        'display': 'block'
+      });
+      }
+    });
+  });
+
+  // Previous button
+  $(".prev-button").click(function(){
+
+  current_fs = $(".show");
+  previous_fs = $(".show").prev();
+
+  $(current_fs).removeClass("show");
+  $(previous_fs).addClass("show");
+
+  $("#progressbar li").eq($(".card2").index(current_fs)).removeClass("active");
+  $("#progressbar li").eq($(".card2").index(previous_fs)).removeClass("checked");
+
+    current_fs.animate({}, {
+      step: function() {
+
+      current_fs.css({
+        'display': 'none',
+      });
+
+      previous_fs.css({
+        'display': 'block'
+      });
+      }
+    });
+  });
+
+  /*======================= attach file ========================*/
+  var applyFiles = function() {
+    if (this.files.length <= 0) {
+      $('.choosen').html('No file choosen.');
+    } else {
+      $('.choosen').empty();
+      
+      for (var i = 0; i < this.files.length; ++i) {
+        $('.choosen').html(this.files[i].name);
+      }
+    }
+  }
+
+  $('input[type="file"]').each(function() {
+    applyFiles.call(this);
+  }).change(function() {
+    applyFiles.call(this);
+  });
+
+  /*======================= register/login tab ========================*/
+  // Show the first tab and hide the rest
+    $('#tabs-nav li:first-child').addClass('active');
+    $('.tab-content').hide();
+    $('.tab-content:first').show();
+
+    // Click function
+    $('#tabs-nav li').click(function(){
+      $('#tabs-nav li').removeClass('active');
+      $(this).addClass('active');
+      $('.tab-content').hide();
+      
+      var activeTab = $(this).find('a').attr('href');
+      $(activeTab).fadeIn();
+      return false;
+    });
   
-})
+});

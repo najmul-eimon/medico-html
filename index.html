@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="./src/images/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="./src/css/all.min.css">
+  <link rel="stylesheet" href="./src/css/select-dropdown.css">
   <link rel="stylesheet" href="./src/css/magnific-popup.css">
   <link rel="stylesheet" href="./src/css/select2.min.css">
+  <link rel="stylesheet" href="./src/css/jquery.datetimepicker.css">
+  <link rel="stylesheet" href="./src/css/datetimepicker.css">
   <link rel="stylesheet" href="./dist/output.css">
 
   <script src="https://unpkg.com/phosphor-icons"></script>
@@ -17,7 +21,7 @@
 
 <body>
   <!-- header start -->
-  <header class="py-2 xl:py-4 w-full fixed left-0 top-0 z-30 bg-white/40 backdrop-blur shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+  <header class="py-2 xl:py-4 w-full fixed left-0 top-0 z-40 bg-white/40 backdrop-blur shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
     <div class="container">
       <div class="flex items-center justify-between">
         <!-- logo -->
@@ -72,8 +76,8 @@
           <p class="pt-4 text-base md:text-sm lg:text-base text-primary-text/60 text-center md:text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p>
           
           <ul class="flex flex-col md:flex-row items-center gap-6 my-6 xl:my-8 2xl:my-10">
-            <li><a href="#!" class="inline-block box-border py-2 lg:py-3 px-9 md:px-8 lg:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Appointment</a></li>
-            <li><a href="#!" class="inline-block box-border py-2 lg:py-3 px-9 md:px-8 lg:px-12 text-primary text-sm font-semibold rounded-md bg-white border border-primary">Find a Doctor</a></li>
+            <li><a href="./pages/appointment.html" class="inline-block box-border py-2 lg:py-3 px-9 md:px-8 lg:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Appointment</a></li>
+            <li><a href="./pages/doctors.html" class="inline-block box-border py-2 lg:py-3 px-9 md:px-8 lg:px-12 text-primary text-sm font-semibold rounded-md bg-white border border-primary">Find a Doctor</a></li>
           </ul>
           
           <div class="flex flex-col lg:flex-row items-center md:items-start lg:items-center gap-2 xl:gap-6">
@@ -453,8 +457,10 @@
   <!-- footer end -->
 
   <script src="./src/js/jquery-3.6.1.min.js"></script>
+  <script src="./src/js/jquery.datetimepicker.full.js"></script>
   <script src="./src/js/jquery.magnific-popup.min.js"></script>
   <script src="./src/js/select2.min.js"></script>
+  <script src="./src/js/mixitup.min.js"></script>
   <script src="./src/js/script.js"></script>
 </body>
 </html>
