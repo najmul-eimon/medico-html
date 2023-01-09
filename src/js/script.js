@@ -91,8 +91,8 @@ $(function(){
   /*======================= date time picker ========================*/
   $('#demo').datetimepicker({
     inline:true,
-    minTime:"3pm",
-    maxTime:"11:30pm",
+    minTime:"13:00",
+    maxTime:"21:30",
     formatTime:'H:i A',
     opened:false,
     step: 30,
@@ -101,15 +101,16 @@ $(function(){
     scrollTime:false,
     monthChangeSpinner:true,
     todayButton:false,
+    timepicker:false,
+    onSelectDate:function () {
+      $('.xdsoft_timepicker').addClass('active');
+    },
   });
 
   $('.xdsoft_timepicker').prepend('<p class="available_time">Available from 3:00 PM - 11.00 PM</p>');
 
   $('.xdsoft_timepicker').removeClass('active');
-  $('.xdsoft_datetimepicker .xdsoft_calendar td').on('click', function(){
-    console.log('click');
-    $('.xdsoft_timepicker').addClass('active');
-  });
+  
     
   /*======================= appointment multi step ========================*/
   var current_fs, next_fs, previous_fs;
@@ -191,6 +192,7 @@ $(function(){
     $('#tabs-nav li:first-child').addClass('active');
     $('.tab-content').hide();
     $('.tab-content:first').show();
+    var regBtn = document.getElementById('regBtn');
 
     // Click function
     $('#tabs-nav li').click(function(){
@@ -200,6 +202,13 @@ $(function(){
       
       var activeTab = $(this).find('a').attr('href');
       $(activeTab).fadeIn();
+      
+      if(activeTab === '#tab1'){
+        regBtn.innerHTML = 'Register'
+      }
+      else{
+        regBtn.innerHTML = 'Login'
+      }
       return false;
     });
   
