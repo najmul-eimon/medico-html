@@ -1290,10 +1290,6 @@ video {
   border-style: solid;
 }
 
-.border-dashed{
-  border-style: dashed;
-}
-
 .border-secondary\/20{
   border-color: rgb(4 90 181 / 0.2);
 }
@@ -1697,10 +1693,6 @@ video {
 
 .pt-\[124px\]{
   padding-top: 124px;
-}
-
-.pb-20{
-  padding-bottom: 5rem;
 }
 
 .text-center{
@@ -2302,10 +2294,10 @@ a:focus {
   display: block;
 }
 
-/* .file-label{
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+.file-label{
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2300000040' stroke-width='2' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
   border-radius: 8px;
-} */
+}
 
 #tabs-nav .active a{
   background-color: rgb(4 90 181 / 0.1);
@@ -2463,14 +2455,14 @@ a:focus {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:text-secondary:hover{
-  --tw-text-opacity: 1;
-  color: rgb(4 90 181 / var(--tw-text-opacity));
-}
-
 .hover\:text-primary:hover{
   --tw-text-opacity: 1;
   color: rgb(55 214 201 / var(--tw-text-opacity));
+}
+
+.hover\:text-secondary:hover{
+  --tw-text-opacity: 1;
+  color: rgb(4 90 181 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{
@@ -2494,13 +2486,13 @@ a:focus {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.hover\:shadow-\[rgba\(0\2c 0\2c 0\2c 0\.08\)\]:hover{
-  --tw-shadow-color: rgba(0,0,0,0.08);
+.hover\:shadow-\[rgba\(0\2c 0\2c 0\2c 0\.1\)\]:hover{
+  --tw-shadow-color: rgba(0,0,0,0.1);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.hover\:shadow-\[rgba\(0\2c 0\2c 0\2c 0\.1\)\]:hover{
-  --tw-shadow-color: rgba(0,0,0,0.1);
+.hover\:shadow-\[rgba\(0\2c 0\2c 0\2c 0\.08\)\]:hover{
+  --tw-shadow-color: rgba(0,0,0,0.08);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -2526,11 +2518,6 @@ a:focus {
 .group:hover .group-hover\:bg-\[\#E5F2FF\]{
   --tw-bg-opacity: 1;
   background-color: rgb(229 242 255 / var(--tw-bg-opacity));
-}
-
-.group:hover .group-hover\:text-secondary{
-  --tw-text-opacity: 1;
-  color: rgb(4 90 181 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:text-primary{
@@ -3463,16 +3450,16 @@ a:focus {
     padding-bottom: 1.5rem;
   }
 
-  .xl\:pt-6{
-    padding-top: 1.5rem;
-  }
-
   .xl\:pt-10{
     padding-top: 2.5rem;
   }
 
   .xl\:pb-20{
     padding-bottom: 5rem;
+  }
+
+  .xl\:pt-6{
+    padding-top: 1.5rem;
   }
 
   .xl\:text-\[40px\]{
@@ -3493,14 +3480,14 @@ a:focus {
     line-height: 1;
   }
 
-  .xl\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
   .xl\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .xl\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .xl\:leading-\[72px\]{
