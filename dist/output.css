@@ -628,6 +628,14 @@ video {
   z-index: 20;
 }
 
+.order-1{
+  order: 1;
+}
+
+.order-2{
+  order: 2;
+}
+
 .col-span-12{
   grid-column: span 12 / span 12;
 }
@@ -726,6 +734,14 @@ video {
 
 .mt-12{
   margin-top: 3rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
+.mt-14{
+  margin-top: 3.5rem;
 }
 
 .box-border{
@@ -1026,6 +1042,10 @@ video {
   max-width: 712px;
 }
 
+.max-w-\[416px\]{
+  max-width: 416px;
+}
+
 .flex-shrink-0{
   flex-shrink: 0;
 }
@@ -1077,6 +1097,10 @@ video {
 
 .flex-col{
   flex-direction: column;
+}
+
+.flex-col-reverse{
+  flex-direction: column-reverse;
 }
 
 .flex-wrap{
@@ -1757,6 +1781,10 @@ video {
   padding-top: 124px;
 }
 
+.pt-7{
+  padding-top: 1.75rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1945,6 +1973,10 @@ video {
 
 .accent-primary{
   accent-color: #37D6C9;
+}
+
+.accent-secondary{
+  accent-color: #045AB5;
 }
 
 .opacity-0{
@@ -3005,6 +3037,14 @@ a:focus {
     position: static;
   }
 
+  .lg\:order-2{
+    order: 2;
+  }
+
+  .lg\:order-1{
+    order: 1;
+  }
+
   .lg\:col-span-5{
     grid-column: span 5 / span 5;
   }
@@ -3086,6 +3126,10 @@ a:focus {
     display: block;
   }
 
+  .lg\:flex{
+    display: flex;
+  }
+
   .lg\:hidden{
     display: none;
   }
@@ -3145,6 +3189,14 @@ a:focus {
 
   .lg\:w-\[92px\]{
     width: 92px;
+  }
+
+  .lg\:w-\[320px\]{
+    width: 320px;
+  }
+
+  .lg\:w-\[350px\]{
+    width: 350px;
   }
 
   .lg\:grid-cols-3{
@@ -3350,8 +3402,16 @@ a:focus {
     padding-bottom: 1.5rem;
   }
 
+  .lg\:pr-\[312px\]{
+    padding-right: 312px;
+  }
+
   .lg\:text-left{
     text-align: left;
+  }
+
+  .lg\:text-right{
+    text-align: right;
   }
 
   .lg\:text-4xl{
@@ -3398,6 +3458,18 @@ a:focus {
     line-height: 1.75rem;
   }
 
+  .lg\:text-\[22px\]{
+    font-size: 22px;
+  }
+
+  .lg\:text-\[23px\]{
+    font-size: 23px;
+  }
+
+  .lg\:font-semibold{
+    font-weight: 600;
+  }
+
   .lg\:leading-\[58px\]{
     line-height: 58px;
   }
@@ -3412,6 +3484,18 @@ a:focus {
 
   .lg\:leading-\[52px\]{
     line-height: 52px;
+  }
+
+  .lg\:leading-10{
+    line-height: 2.5rem;
+  }
+
+  .lg\:leading-8{
+    line-height: 2rem;
+  }
+
+  .lg\:leading-9{
+    line-height: 2.25rem;
   }
 
   .lg\:shadow-none{
@@ -3471,6 +3555,18 @@ a:focus {
     width: 482px !important;
   }
 
+  .xl\:w-\[618px\]{
+    width: 618px;
+  }
+
+  .xl\:w-\[450px\]{
+    width: 450px;
+  }
+
+  .xl\:w-\[400px\]{
+    width: 400px;
+  }
+
   .xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -3507,6 +3603,10 @@ a:focus {
     padding: 3rem;
   }
 
+  .xl\:p-10{
+    padding: 2.5rem;
+  }
+
   .xl\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -3515,6 +3615,11 @@ a:focus {
   .xl\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  .xl\:py-10{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .xl\:pb-6{
@@ -3531,6 +3636,10 @@ a:focus {
 
   .xl\:pt-6{
     padding-top: 1.5rem;
+  }
+
+  .xl\:pr-\[312px\]{
+    padding-right: 312px;
   }
 
   .xl\:text-\[40px\]{
@@ -3561,6 +3670,20 @@ a:focus {
     line-height: 1.5rem;
   }
 
+  .xl\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .xl\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .xl\:text-\[32px\]{
+    font-size: 32px;
+  }
+
   .xl\:leading-\[72px\]{
     line-height: 72px;
   }
@@ -3572,6 +3695,10 @@ a:focus {
   .xl\:leading-9{
     line-height: 2.25rem;
   }
+
+  .xl\:leading-10{
+    line-height: 2.5rem;
+  }
 }
 
 @media (min-width: 1536px){
@@ -3582,6 +3709,10 @@ a:focus {
 
   .\32xl\:w-\[67px\]{
     width: 67px;
+  }
+
+  .\32xl\:w-\[618px\]{
+    width: 618px;
   }
 
   .\32xl\:gap-6{
@@ -3596,18 +3727,47 @@ a:focus {
     padding-left: 120px;
   }
 
+  .\32xl\:pr-\[312px\]{
+    padding-right: 312px;
+  }
+
+  .\32xl\:pr-\[200px\]{
+    padding-right: 200px;
+  }
+
+  .\32xl\:pb-20{
+    padding-bottom: 5rem;
+  }
+
   .\32xl\:text-5xl{
     font-size: 3rem;
     line-height: 1;
   }
 
+  .\32xl\:text-\[40px\]{
+    font-size: 40px;
+  }
+
+  .\32xl\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .\32xl\:leading-\[72px\]{
     line-height: 72px;
+  }
+
+  .\32xl\:leading-\[60px\]{
+    line-height: 60px;
   }
 }
 
 @media (min-width: 1820px){
   .\33xl\:pl-\[305px\]{
     padding-left: 305px;
+  }
+
+  .\33xl\:pr-\[312px\]{
+    padding-right: 312px;
   }
 }
