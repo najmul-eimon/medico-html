@@ -588,6 +588,14 @@ video {
   right: 0.75rem;
 }
 
+.right-6{
+  right: 1.5rem;
+}
+
+.top-1\/2{
+  top: 50%;
+}
+
 .top-1{
   top: 0.25rem;
 }
@@ -598,10 +606,6 @@ video {
 
 .right-4{
   right: 1rem;
-}
-
-.top-1\/2{
-  top: 50%;
 }
 
 .right-\[10px\]{
@@ -1623,14 +1627,14 @@ video {
   padding-bottom: 6px;
 }
 
-.py-12{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-\[5px\]{
@@ -1703,6 +1707,14 @@ video {
 
 .pt-6{
   padding-top: 1.5rem;
+}
+
+.pl-6{
+  padding-left: 1.5rem;
+}
+
+.pr-6{
+  padding-right: 1.5rem;
 }
 
 .pb-8{
@@ -1815,16 +1827,16 @@ video {
   font-weight: 500;
 }
 
+.font-normal{
+  font-weight: 400;
+}
+
 .font-extrabold{
   font-weight: 800;
 }
 
 .font-light{
   font-weight: 300;
-}
-
-.font-normal{
-  font-weight: 400;
 }
 
 .uppercase{
@@ -1886,6 +1898,10 @@ video {
 
 .text-white\/60{
   color: rgb(255 255 255 / 0.6);
+}
+
+.text-black\/80{
+  color: rgb(0 0 0 / 0.8);
 }
 
 .text-secondary-text{
@@ -2369,6 +2385,137 @@ a:focus {
 
 #tabs-nav .active a{
   background-color: rgb(4 90 181 / 0.1);
+}
+
+/* select dropdown */
+
+.select2-container--default .select2-selection--single{
+  border: 1px solid rgba(4, 90, 181, 0.1);
+  border-radius: 6px;
+}
+
+.select2-container .select2-selection--single{
+  height: 2.75rem;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: rgb(0 0 0 / 0.8);
+  line-height: 44px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  right: 1.5rem;
+  top: 50%;
+  display: flex;
+  height: 1.25rem;
+  width: 1.25rem;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  align-items: center;
+  justify-content: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+  border: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow:before{
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 600;
+  color: #000;
+}
+
+.select2-search--dropdown{
+  display: none;
+}
+
+.select2-results__option{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: rgb(0 0 0 / 0.8);
+}
+
+.select2-dropdown {
+  border: 1px solid rgba(4, 90, 181, 0.1);
+  border-radius: 6px;
+  box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.1);
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: rgba(4, 90, 181, 0.1);
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: rgba(4, 90, 181, 0.1);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.select2-container--open .select2-selection--single .select2-selection__arrow{
+  transform: translateY(-50%) rotate(180deg) !important;
+}
+
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar {
+  width: 4px;
+}
+
+.select2-container--default .select2-results>.select2-results__options::-moz-scrollbar {
+  width: 4px;
+}
+
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-track {
+  background-color: #F4F4F4;
+}
+
+.select2-container--default .select2-results>.select2-results__options::-moz-scrollbar-track {
+  background-color: #F4F4F4;
+}
+
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.select2-container--default .select2-results>.select2-results__options::-moz-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* appointment page select dropdown */
+
+.appointment .tab-content .select2-container {
+  width: 100% !important;
+}
+
+.appointment .tab-content .select2-container .select2-selection--single{
+  height: 2.5rem;
+}
+
+.appointment .tab-content .select2-container--default .select2-selection--single .select2-selection__rendered{
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: rgb(0 32 29 / 0.4);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.appointment .tab-content .select2-container--default .select2-selection--single {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.appointment .tab-content .select2-container--default .select2-selection--single .select2-selection__arrow {
+  right: 10px;
 }
 
 .placeholder\:text-sm::-moz-placeholder{
