@@ -2387,6 +2387,12 @@ a:focus {
   background-color: rgb(4 90 181 / 0.1);
 }
 
+@media screen and (min-width:1024px) {
+  .map-bg{
+    background: url('../src/images/map.png');
+  }
+}
+
 /* select dropdown */
 
 .select2-container--default .select2-selection--single{
