@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="data:image/x-icon;base64,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" type="image/x-icon">
+
+  
+  
+  
+  
+  
+  
+  
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <title>Medico | Home</title>
+  <link rel="stylesheet" href="/assets/index-192c7744.css">
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="py-2 xl:py-4 w-full fixed left-0 top-0 z-40 bg-white/40 backdrop-blur shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <!-- logo -->
+        <a href="index.html" class="inline-block w-[75px] sm:w-[150px] lg:w-auto">
+          <img src="/assets/logo-3a68dafe.png" alt="Logo">
+        </a>
+
+        <div>
+          <!-- mobile screen overlay -->
+          <div class="mobile-overlay transition-all ease-linear duration-500 h-screen w-full bg-black/30 fixed inset-0 opacity-0 invisible z-40 lg:hidden"></div>
+
+          <!-- mobile menu toggle button -->
+          <button type="button" class="menu-toggle h-5 w-5 flex items-center justify-center lg:hidden">
+            <img src="/assets/menu-7ed6c00e.svg" alt="Logo">
+          </button>
+
+          <div class="mobile-menu transition-all ease-linear duration-500 h-screen lg:h-auto w-[320px] lg:w-auto bg-white lg:bg-transparent fixed z-50 lg:static top-0 -left-[320px] p-4 lg:p-0 overflow-y-auto lg:overscroll-none shadow lg:shadow-none">
+            <!-- close menu button -->
+            <button type="button" class="close-menu h-8 w-8 bg-secondary rounded-full flex items-center justify-center absolute top-3 right-3 lg:hidden">
+              <i class="ph-x text-white"></i>
+            </button>
+
+            <!-- mobile screen logo -->
+            <a href="index.html" class="inline-block mb-6 w-36 lg:hidden">
+              <img src="/assets/logo-3a68dafe.png" alt="Logo">
+            </a>
+
+            <!-- menu items -->
+            <ul class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-7">
+              <li><a href="index.html" class="nav-link inlione-block text-base text-primary-text active">Home</a></li>
+              <li><a href="pages/about.html" class="nav-link inlione-block text-base text-primary-text">About</a></li>
+              <li><a href="pages/service.html" class="nav-link inlione-block text-base text-primary-text">Services</a></li>
+              <li><a href="pages/doctors.html" class="nav-link inlione-block text-base text-primary-text">Doctors</a></li>
+              <li><a href="pages/blog.html" class="nav-link inlione-block text-base text-primary-text">Blog</a></li>
+              <li><a href="#!" class="inline-block py-3 px-12 border border-secondary/20 bg-secondary/10 text-sm font-semibold text-secondary rounded-md">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- main start -->
+  <main class="mt-9 sm:mt-[55px] lg:mt-0">
+    <!-- banner start -->
+    <section class="banner">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 pt-10 md:pt-0">
+        <!-- text content -->
+        <div class="pl-4 pr-4 md:pr-0 2xl:pl-[120px] 3xl:pl-[305px]">
+          <h1 class="text-2xl lg:text-4xl xl:text-[40px] 2xl:text-5xl leading-9 lg:leading-[58px] 2xl:leading-[72px] font-bold text-primary-text text-center md:text-left">We Are Always Ensure Best Medical Treatment</h1>
+          <p class="pt-4 text-base md:text-sm lg:text-base text-primary-text/60 text-center md:text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p>
+          
+          <ul class="flex flex-col md:flex-row items-center gap-6 my-6 xl:my-8 2xl:my-10">
+            <li><a href="pages/appointment.html" class="inline-block box-border py-2 lg:py-3 px-9 md:px-8 lg:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Appointment</a></li>
+            <li><a href="pages/doctors.html" class="inline-block box-border py-2 lg:py-3 px-9 md:px-8 lg:px-12 text-primary text-sm font-semibold rounded-md bg-white border border-primary">Find a Doctor</a></li>
+          </ul>
+          
+          <div class="flex flex-col lg:flex-row items-center md:items-start lg:items-center gap-2 xl:gap-6">
+            <div class="py-2 px-4 lg:p-4 text-center md:text-left">
+              <small class="block text-sm font-medium text-primary-text/60">emergency cases</small>
+              <h5 class="pt-2 text-base lg:text-lg font-bold text-primary-text">+1 (800) 450 7550</h5>
+            </div>
+            <div class="py-2 px-4 lg:p-4 text-center md:text-left">
+              <small class="block text-sm font-medium text-primary-text/60">online consultation</small>
+              <h5 class="pt-2 text-base lg:text-lg font-bold text-primary-text">consultation@medico.xyz</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- image -->
+        <div class="h-[192px] sm:h-[300px] md:h-auto w-full">
+          <img src="/assets/banner-890316e6.jpg" alt="Banner image" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </section>
+    <!-- banner end -->
+
+    <!-- service start -->
+    <section class="service py-10 lg:py-16">
+      <div class="container">
+        <!-- title -->
+        <div class="border-b-2 border-black/5 mb-6 md:mb-10">
+          <h2 class="pb-4 text-2xl lg:text-[32px] font-semibold text-secondary relative after:content after:w-[86px] after:bg-primary after:rounded after:h-[2px] after:absolute after:bottom-[-2px] after:left-0">Services</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 md:gap-y-10">
+          <!-- item 1 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="/assets/stethoscope-284d7508.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl xl:text-2xl font-medium text-primary-text">Visit a doctor</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="/assets/health-checkup-ac37d96f.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl xl:text-2xl font-medium text-primary-text">Health Checkup</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="/assets/pharmacy-f85574b2.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl lg:text-2xl font-medium text-primary-text">Pharmacy</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+
+          <!-- item 4 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="/assets/hospital-bed-68d7949c.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl xl:text-2xl font-medium text-primary-text">Hospital</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+
+          <!-- item 5 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="/assets/diagnostic-39deaf57.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl xl:text-2xl font-medium text-primary-text">Diagnostic</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+
+          <!-- item 6 -->
+          <div class="flex flex-col md:flex-row items-center md:gap-6 rounded-[10px] pb-3 md:pb-0 overflow-hidden relative group">
+            <div class="hidden md:block w-[86px] h-full rounded-r-[5px] absolute top-0 left-0 bg-[#EDEDF3]/40 z-0 transition-all duration-300 ease-linear group-hover:w-full group-hover:bg-[#E5F2FF]"></div>
+            <div class="flex items-center justify-center w-[60px] md:w-[86px] h-[60px] md:h-full rounded-[5px] md:rounded-none bg-[#EDEDF3]/40 md:bg-transparent flex-shrink-0 relative z-10">
+              <img src="/assets/surgery-80debb3c.svg" alt="">
+            </div>
+            <div class="relative z-10 px-1 py-2 md:pt-4 md:pb-3 text-center md:text-left">
+              <h3 class="text-base md:text-xl xl:text-2xl font-medium text-primary-text">Surgery</h3>
+              <p class="text-sm text-primary-text/40 pt-1 md:pt-[1px]">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- service end -->
+
+    <!-- why-we start -->
+    <section class="why-we py-6 md:py-10 lg:py-16">
+      <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 items-center gap-6">
+          <!-- text content -->
+          <div class="lg:col-span-5 pb-[98px] sm:pb-16 md:pb-0 md:row-span-2 lg:row-auto">
+            <h2 class="text-2xl lg:text-[32px] lg:leading-[48px] font-semibold text-primary-text text-center md:text-left">Joining Hands With Techno Easement</h2>
+            <p class="text-sm md:text-base text-primary-text/40 text-center md:text-left">It is a long established fact that a reader will be distracted by at its layout. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            
+            <ul class="my-6 space-y-[14px]">
+              <li class="flex items-center gap-[14px]"><i class="ph-check text-2xl text-primary"></i><p class="text-sm md:text-base font-medium text-primary-text">Comprehensive Inpatient Services</p></li>
+              <li class="flex items-center gap-[14px]"><i class="ph-check text-2xl text-primary"></i><p class="text-sm md:text-base font-medium text-primary-text">Medical And Surgical Services</p></li>
+              <li class="flex items-center gap-[14px]"><i class="ph-check text-2xl text-primary"></i><p class="text-sm md:text-base font-medium text-primary-text">Outpatient Services</p></li>
+              <li class="flex items-center gap-[14px]"><i class="ph-check text-2xl text-primary"></i><p class="text-sm md:text-base font-medium text-primary-text">Medicine & instrument</p></li>
+              <li class="flex items-center gap-[14px]"><i class="ph-check text-2xl text-primary"></i><p class="text-sm md:text-base font-medium text-primary-text">Specialised Support Service</p></li>
+              <li class="flex items-center gap-[14px]"><i class="ph-check text-2xl text-primary"></i><p class="text-sm md:text-base font-medium text-primary-text">Instant Operation & Appointment</p></li>
+            </ul>
+
+            <div class="text-center md:text-left">
+              <a href="pages/appointment.html" class="inline-block py-2 md:py-3 px-9 md:px-12 text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Appointment</a>
+            </div>
+          </div>
+
+          <!-- image -->
+          <div class="lg:col-span-5 h-[196px] sm:h-[300px] md:h-auto">
+            <img src="/assets/icu-5414962d.jpg" alt="ICU image" class="h-full w-full object-cover">
+          </div>
+
+          <!-- counter -->
+          <div class="lg:col-span-2 md:row-start-2 md:col-start-2 lg:row-start-auto lg:col-start-auto">
+            <ul id="counter" class="flex flex-row lg:flex-col flex-wrap gap-y-4 lg:gap-20 justify-center">
+              <li class="w-1/2 sm:w-1/3 lg:w-full text-center">
+                <p class="text-[40px] lg:text-5xl xl:text-[64px] font-semibold text-[rgba(255,255,255,0.16)]">250+</p>
+                <p class="text-2xl lg:text-3xl xl:text-5xl leading-9 xl:leading-[72px] -mt-9 md:-mt-8 lg:-mt-7 xl:-mt-10 font-semibold text-white">
+                  <span class="counter" data-count="250">0</span>+
+                </p>
+                <span class="block text-sm lg:text-base xl:text-2xl text-white">Modern ICU Bed</span>
+              </li>
+              <li class="w-1/2 sm:w-1/3 lg:w-full text-center">
+                <p class="text-[40px] lg:text-5xl xl:text-[64px] font-semibold text-[rgba(255,255,255,0.16)]">200+</p>
+                <p class="text-2xl lg:text-3xl xl:text-5xl leading-9 xl:leading-[72px] -mt-9 md:-mt-8 lg:-mt-7 xl:-mt-10 font-semibold text-white">
+                  <span class="counter" data-count="200">0</span>+
+                </p>
+                <span class="block text-sm lg:text-base xl:text-2xl text-white">Pathologist</span>
+              </li>
+              <li class="w-1/2 sm:w-1/3 lg:w-full text-center">
+                <p class="text-[40px] lg:text-5xl xl:text-[64px] font-semibold text-[rgba(255,255,255,0.16)]">100+</p>
+                <p class="text-2xl lg:text-3xl xl:text-5xl leading-9 xl:leading-[72px] -mt-9 md:-mt-8 lg:-mt-7 xl:-mt-10 font-semibold text-white">
+                  <span class="counter" data-count="100">0</span>+
+                </p>
+                <span class="block text-sm lg:text-base xl:text-2xl text-white">Expert Doctors</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- why-we end -->
+
+    <!-- departments start -->
+    <section class="departments py-10 lg:py-16">
+      <div class="container">
+        <!-- title -->
+        <div class="border-b-2 border-black/5 mb-6 md:mb-10">
+          <h2 class="pb-4 text-2xl lg:text-[32px] font-semibold text-secondary relative after:content after:w-[86px] after:bg-primary after:rounded after:h-[2px] after:absolute after:bottom-[-2px] after:left-0">Departments</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0">
+          <!-- item 1 -->
+          <div class="p-4 md:py-4 md:px-14 text-center lg:border-r lg:border-b border-black/5">
+            <div class="h-20 md:h-[120px] w-20 md:w-[120px] flex items-center justify-center mx-auto">
+              <img src="/assets/emergency-09d56fa0.svg" alt="heart icon">
+            </div>
+            <div class="py-2 my-2">
+              <h4 class="text-xl md:text-2xl text-primary-text font-medium">Emergency</h4>
+              <p class="text-sm text-primary-text/60">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+            <a href="pages/service.html" class="mx-auto flex justify-center gap-1 rounded-[5px] py-2 w-[148px] md:w-[135px] text-sm font-semibold text-secondary border border-secondary/20 bg-secondary/10 hover:bg-secondary hover:border-secondary hover:text-white group">
+              Read More
+              <img src="/assets/navigation-arrow-9e8d3809.svg" alt="Arrow icon" class="transition-all duration-300 w-0 overflow-hidden group-hover:w-[18px]">
+            </a>
+          </div>
+
+          <!-- item 2 -->
+          <div class="p-4 md:py-4 md:px-14 text-center lg:border-b border-black/5">
+            <div class="h-20 md:h-[120px] w-20 md:w-[120px] flex items-center justify-center mx-auto">
+              <img src="/assets/neuro-science-142e26cc.svg" alt="heart icon">
+            </div>
+            <div class="py-2 my-2">
+              <h4 class="text-xl md:text-2xl text-primary-text font-medium">Neuro Science</h4>
+              <p class="text-sm text-primary-text/60">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+            <a href="pages/service.html" class="mx-auto flex justify-center gap-1 rounded-[5px] py-2 w-[148px] md:w-[135px] text-sm font-semibold text-secondary border border-secondary/20 bg-secondary/10 hover:bg-secondary hover:border-secondary hover:text-white group">
+              Read More
+              <img src="/assets/navigation-arrow-9e8d3809.svg" alt="Arrow icon" class="transition-all duration-300 w-0 overflow-hidden group-hover:w-[18px]">
+            </a>
+          </div>
+
+          <!-- item 3 -->
+          <div class="p-4 md:py-4 md:px-14 text-center lg:border-l lg:border-b border-black/5">
+            <div class="h-20 md:h-[120px] w-20 md:w-[120px] flex items-center justify-center mx-auto">
+              <img src="/assets/kidney-1709d673.svg" alt="heart icon">
+            </div>
+            <div class="py-2 my-2">
+              <h4 class="text-xl md:text-2xl text-primary-text font-medium">Kidney & Urology</h4>
+              <p class="text-sm text-primary-text/60">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+            <a href="pages/service.html" class="mx-auto flex justify-center gap-1 rounded-[5px] py-2 w-[148px] md:w-[135px] text-sm font-semibold text-secondary border border-secondary/20 bg-secondary/10 hover:bg-secondary hover:border-secondary hover:text-white group">
+              Read More
+              <img src="/assets/navigation-arrow-9e8d3809.svg" alt="Arrow icon" class="transition-all duration-300 w-0 overflow-hidden group-hover:w-[18px]">
+            </a>
+          </div>
+
+          <!-- item 4 -->
+          <div class="p-4 md:py-4 md:px-14 text-center lg:border-r border-black/5">
+            <div class="h-20 md:h-[120px] w-20 md:w-[120px] flex items-center justify-center mx-auto">
+              <img src="/assets/cardiology-a11a7ba2.svg" alt="heart icon">
+            </div>
+            <div class="py-2 my-2">
+              <h4 class="text-xl md:text-2xl text-primary-text font-medium">Cardiology</h4>
+              <p class="text-sm text-primary-text/60">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+            <a href="pages/service.html" class="mx-auto flex justify-center gap-1 rounded-[5px] py-2 w-[148px] md:w-[135px] text-sm font-semibold text-secondary border border-secondary/20 bg-secondary/10 hover:bg-secondary hover:border-secondary hover:text-white group">
+              Read More
+              <img src="/assets/navigation-arrow-9e8d3809.svg" alt="Arrow icon" class="transition-all duration-300 w-0 overflow-hidden group-hover:w-[18px]">
+            </a>
+          </div>
+
+          <!-- item 5 -->
+          <div class="p-4 md:py-4 md:px-14 text-center">
+            <div class="h-20 md:h-[120px] w-20 md:w-[120px] flex items-center justify-center mx-auto">
+              <img src="/assets/medicine-d51f1a47.svg" alt="heart icon">
+            </div>
+            <div class="py-2 my-2">
+              <h4 class="text-xl md:text-2xl text-primary-text font-medium">Surgery</h4>
+              <p class="text-sm text-primary-text/60">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+            <a href="pages/service.html" class="mx-auto flex justify-center gap-1 rounded-[5px] py-2 w-[148px] md:w-[135px] text-sm font-semibold text-secondary border border-secondary/20 bg-secondary/10 hover:bg-secondary hover:border-secondary hover:text-white group">
+              Read More
+              <img src="/assets/navigation-arrow-9e8d3809.svg" alt="Arrow icon" class="transition-all duration-300 w-0 overflow-hidden group-hover:w-[18px]">
+            </a>
+          </div>
+
+          <!-- item 6 -->
+          <div class="p-4 md:py-4 md:px-14 text-center lg:border-l border-black/5">
+            <div class="h-20 md:h-[120px] w-20 md:w-[120px] flex items-center justify-center mx-auto">
+              <img src="/assets/gastroenterology-1eaa380a.svg" alt="heart icon">
+            </div>
+            <div class="py-2 my-2">
+              <h4 class="text-xl md:text-2xl text-primary-text font-medium">Digestive</h4>
+              <p class="text-sm text-primary-text/60">Aenean facilisis sodales est neciMorbi vitapurus on convallis commodo velante</p>
+            </div>
+            <a href="pages/service.html" class="mx-auto flex justify-center gap-1 rounded-[5px] py-2 w-[148px] md:w-[135px] text-sm font-semibold text-secondary border border-secondary/20 bg-secondary/10 hover:bg-secondary hover:border-secondary hover:text-white group">
+              Read More
+              <img src="/assets/navigation-arrow-9e8d3809.svg" alt="Arrow icon" class="transition-all duration-300 w-0 overflow-hidden group-hover:w-[18px]">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- departments end -->
+
+    <!-- download-app start -->
+    <section class="download-app pb-10 md:py-10 lg:py-16">
+      <div class="container">
+        <div class="grid grid-cols-1 sm:grid-cols-12 items-center px-2 py-6 sm:pl-0 md:py-11 bg-gradient-to-r from-[#0686E6] to-[#045CB7] rounded-3xl">
+          <div class="sm:col-span-5">
+            <h2 class="text-white text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl leading-9 md:leading-[44px] lg:leading-[54px] 2xl:leading-[72px] font-bold text-center sm:hidden">Download our app and set appointment</h2>
+            <div class="w-full text-center my-10 md:my-0">
+              <img src="/assets/mock-up-a75609de.png" alt="Mock up image" class="mx-auto">
+            </div>
+          </div>
+          <div class="sm:col-span-7">
+            <h2 class="text-white pb-10 text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl leading-9 md:leading-[44px] lg:leading-[54px] 2xl:leading-[72px] font-bold hidden sm:block">Download our app and set appointment</h2>
+            <ul class="flex flex-col md:flex-row items-center sm:items-start md:items-center gap-4 md:gap-10">
+              <li><a href="#!" class="rounded-[10px] overflow-hidden"><img src="data:image/png;base64,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" alt="Play store"></a></li>
+              <li><a href="#!" class="rounded-[10px] overflow-hidden"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAABGCAYAAABfRwFTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAo1SURBVHgB7Z07fhRHEIcb48AZcAKkE6DQGeIEiMyZxAlEaEeIEyBOADoBckgk6QSI0JFE5gxuIM+30n8plbtnZ3eei+r7/UraefVjpqsf1dM191Keh5XsVrJdyVYlGykIAst5JZeVHFdy1PSi55V8q+QqJCSkkVyk68boFvfd9ttKDiv5LQVB0BR6ejs3v8+00yrX60r+TEEQrMp2ula0T2zcu9lJk/YhBUHQBbRif0u56DNupCAIuuB7JZt0C2m19lIQBF2BzeLfX9KPgVgQBN2xjXJtpSAIumaLMddVCoKgc35JQRD0QihXEPREKFcQ9MSklevp06fp7du36eLiIr1+/ToFwTrxa5ogGxsb6f3792l7ezsFwboyuZbryZMn6fPnz/9TrO/fv6cxefjwYdrd3Z0LrSr7hoZ4ackfP36c+uD58+ez8PuE++bvH3ES98/GZF7dr1qsq2/fvl3l2NraGj1tUCn+1cnJyVVVGGbbVXd10HRUhXIWb6VcvYS/t7c3C3/oPEBVafUa7wgyncSowHrYP3bapFxVizrfR2GA/f39WwWn6tLOFLAaL84LEOdYRWSb87Rd1drz4+wnbK4nHFvofMGsav/ZdR8/fpyJL6BVT2CeHo4RD+HafCke0oSUlKsuLuWb/6W0SDgG/Ne9U0Vl00J8Pp1cQzx9VS4dyzQSooKaYwo1Wk65EB64lJ+Cq0JDQWE/QiGhRaBV1nW0gFZJVGhU0DiXsNmn3yrE9jrCIQ6da5Vdaaawkh7OJSyll+P8Zj/HdX1JuXJxqUJQi8dxGxbp9eHoGOHo2ebyrPuhdCofup6KY+xysUCmkZBSq2Vr9zGlpFy2G0UebHpRKgoJBYLfKmy20EsROE9hWwVBuF6KaZVLymxrcZ1LfOq+2vTafaRVyp9cwff5L8UFqjz8cZQx9/xK3ULbsts82wrM5oMKqc9n3lYmYdCoxlMzC6Hn8vIyHRwcpCnz4MGD+W/ycHp6Ot/GCHN+fj7LH785xm8G8/xGMNywDf5a8fXr16zxhLC4RxwXhMG5pAX58OHDrWtsHBwnfTaus7OzlEN5sHEdHR3Nj9m05vLQBPJiw1GelR+MHhLitPFOkUmY4nOWLwrBixcvRrcSLgLlUIElrV4J2FahOT4+Tjs7O7NtflOwX716NVe0ZVF8iO6T4q9q/dk+XwBtJUY6fKVmKwsfl8LXbz23IZ4RaX358mXKpWnKjN58qkuhrpLvek1B1JVjjEB3hq4N3RW6LureaJzFMfZxHGTplDWUc7SPbcSOKxWPvz/JdanU7SQexh8cI2x1l2Sc4D/na1yrLpbCIt3Kk7rnPv+Ki26ejUth5ayMPMtct5C8q4usLmmTPMvIoe01sC72HwkPTlIquIjt++uB6kEiYw5gpVyCgkbhsWkivdYo4JVGBc6OH2Q5s3lvqlzatuNVws+Ni3RM4yx7XNMfMlbklAshr6W4llEu8qp8c86iPCMoluK2Bp6JSz8ByzTr561U+zFAzl3HjecYN7005+XN01MT8oAyDh2nr5ysLErPMuldFFefkquEJyzdZ57C3wRZ11BEzb+UFKp0/ZrMd4TcTekuMJRkGeXoAuIrtYIhISNLNwHRHx8LFGwNJhRD7ph0Ms+FORfT8lisg0k2uJu01lBrIRuaGHeFTFVaO6jRzPkYMLHIJK59KyAIpkLrbuGYK4R5NSoUK5gqrVsuWq3ce4F9w+tCz549S0EwVVq1XHo5dAz8C6lBMDVaKVdfS82bsMqLrkEwJK2Ua3NzM42BX/oQBFOklXKVlif0TcxrtUPLVIJ+CaegLcALlBbv7e/vp6mDZZe0stZLggu7XPee/ScnJ7M8Bquz8iSZXYc1NFN4M9ovvxg7PXViX6Ym3fYd0NxE/FjerX4madVyUfONBf4Nx8S7JrDL9ZtAt4w8LNs9o5VZ9jr8AcoPJNMXjJUfPXo0WxVNFzvnDqAppGOVNOm6HOwfyy9k16ysmX4B4ZCM3VLolS/SoVahVMtrwaIWV/olObQSuTf7BSuzWSzoVxw0dTFm4/fHCNc6e6l7pjYueg65JUJ+sabPC/nUQkm/kDKXR+7NGvszbBfA0EtMLDm3XUOJuk08eC2nt67TcoXbdsfk0sxiPT7ZAqnzuFbuzYT33lQXv7xC1Z0rN2ZCbgls19GfI7dnFl9Z2HOFVS77fqp3vApr2j1tF0DThZF90KRg9SFaag/yZSFyCm+X2pNm6yOEgmqVxy/3F7QS9pgUGha5n7PpVUuw6L7VjbnU8qyaF8LEj4aOW5+VvpWy924NlxW1C8Bmfgx4mEMrmGpZ6zdPlUzOt4O9R7kuk3XjbVsvm8e6e9+kRco9J7lLyKWppFxyLgO5rqwc2ZTykqsIpJClSqLu3k5c2gVga8WxGHrZiQqPrWVt19AXdBXskpIgOYUVpTGHHR818aXP+RpjLbp/JeVa1AVelJe6saU8FXuR8k3dIpuR7grb2AzRL1cXxhcuW2P7rmGdQcEXSHuOqHM11+ScnKBo5EVp9mkrKZcdP3aRl2WMYuumXJ04BT08PJyEZ9wh3tyo5vbmv5lktch0zL3IvbFf95Kzrs3loWSybuNxlrVwEnn+JZ5Fr5XpeJ2ZvC4vuXQIytGXL1+K54459bMqrTXUDujHpO+uYdNa1ncN7XgnZ/Cw4XrnoFCqseVjsK6LpvhlnfTH7BjKprnJmGuVvORaWHVTS2Mu+a1cwxXn3QQ05lL/ugfTpViPtXJkaoWClxvMe2uhLSTWrO2PWeQVV8eWsRbqIwoKR/utc07fzaszMkgZcnnRdaW85JTLWgv9dMQiY9DEpZuAxpxQHurGL6phkdx4IzfP5eeroDQ35Oe5/KtLTayl/vUnH44v9LZQa66rNM/l85LzxlWKR6JWWOnzTmHv5DxX6QYNyRAmWlt51BkPrPVUhd4aNHJOU0v+8W186toJ+2mipnnwYSju3PyRXHPbAu5bKd9bkYvvujc06u4dLZhPH4q7xn4puwuMB3JR+M5WX4w1kbyM5KyFcnldl3bhJ2rbunRuEvcy0kWacukb2iV419LpJ4SwDmFNG3KVMJ+VWcf1XaR5lXRb69rQcZfoIk2WrtM3Fp2v5+LjaXxzaggwecdy/2Cq9LJY8t27d707kEGp3rx5k4JgqvT2ZUl9BdBOuuZASfTpUCYfmRjV2qO6a/jqZBBMnV4HdTkLlb4eXxoA69Ucf50sZH2nuWshPxglmrz/Z4VrkDX6HlWIkdZOQZugFon/tFLLDIDlG1Ef7w6CdWEQ5QqCu0h4fwqCngjlCoKeQLkuUxAEXXOOcoWVIAi65xLlOk1BEHTNMdZClo1e3PwPgqA9l5Vs0nLxhuReCoKgKw74c/9m45903XL9noIgaMNBJe/4cd/s/HTzfzsFQbAKh5X8pY377uBZuu4v4lYoxmBB0AyGVn+kmxZL3Ku5YLeSnUo20rWyBUHwg8t0PY11WslRulawW/wHY4y8bPBKm/sAAAAASUVORK5CYII=" alt="App store"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- download-app end -->
+  </main>
+  <!-- main end -->
+
+  <!-- footer start -->
+  <footer class="bg-[#393C45] py-5 md:py-10">
+
+    <!-- footer-top start -->
+    <section class="footer-top pb-6">
+      <div class="container">
+        <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-12 gap-6">
+
+          <!-- company -->
+          <div class="sm:col-span-3 lg:col-span-4 text-center lg:text-left">
+            <a href="index.html" class="inline-block mx-auto lg:mx-0 w-[150px] md:w-auto">
+              <img src="/assets/footer-logo-65a8f01b.png" alt="Logo">
+            </a>
+            <p class="text-white/60 text-sm lg:text-base py-4 md:py-6">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam. Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam</p>
+            <ul class="flex items-center justify-center lg:justify-start gap-6">
+              <li><a href="#" class="group"><i class="fab fa-facebook-f text-white/60 group-hover:text-primary"></i></a></li>
+              <li><a href="#" class="group"><i class="fab fa-twitter text-white/60 group-hover:text-primary"></i></a></li>
+              <li><a href="#" class="group"><i class="fab fa-instagram text-white/60 group-hover:text-primary"></i></a></li>
+              <li><a href="#" class="group"><i class="fab fa-linkedin-in text-white/60 group-hover:text-primary"></i></a></li>
+              <li><a href="#" class="group"><i class="fab fa-youtube text-white/60 group-hover:text-primary"></i></a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="lg:col-span-3 text-center sm:text-left">
+            <h4 class="pb-6 md:pb-10 text-white font-bold text-base md:text-xl">Company</h4>
+            <ul class="space-y-4 lg:space-y-[18px]">
+              <li><a href="index.html" class="text-sm lg:text-base text-white/60 hover:text-primary">Home</a></li>
+              <li><a href="pages/service.html" class="text-sm lg:text-base text-white/60 hover:text-primary">Services</a></li>
+              <li><a href="pages/doctors.html" class="text-sm lg:text-base text-white/60 hover:text-primary">All Doctors</a></li>
+              <li><a href="pages/blog.html" class="text-sm lg:text-base text-white/60 hover:text-primary">Blog</a></li>
+              <li><a href="pages/appointment.html" class="text-sm lg:text-base text-white/60 hover:text-primary">Appointment</a></li>
+            </ul>
+          </div>
+
+          <!-- services -->
+          <div class="lg:col-span-2 text-center sm:text-left">
+            <h4 class="pb-6 md:pb-10 text-white font-bold text-base md:text-xl">Services</h4>
+            <ul class="space-y-4 lg:space-y-[18px]">
+              <li><a href="pages/service.html" class="text-sm lg:text-base text-white/60 hover:text-primary">Visit A Doctor</a></li>
+              <li><a href="pages/service.html" class="text-sm lg:text-base text-white/60 hover:text-primary">Health Checkup</a></li>
+              <li><a href="pages/service.html" class="text-sm lg:text-base text-white/60 hover:text-primary">Pharmacy</a></li>
+              <li><a href="pages/service.html" class="text-sm lg:text-base text-white/60 hover:text-primary">Hospital</a></li>
+              <li><a href="pages/service.html" class="text-sm lg:text-base text-white/60 hover:text-primary">Diagnostic</a></li>
+              <li><a href="pages/service.html" class="text-sm lg:text-base text-white/60 hover:text-primary">Surgery</a></li>
+            </ul>
+          </div>
+
+          <!-- contact -->
+          <div class="lg:col-span-3 text-center sm:text-left">
+            <h4 class="pb-5 md:pb-10 text-white font-bold text-base md:text-xl">Contact us</h4>
+            <ul class="space-y-4 lg:space-y-7">
+              <li class="flex flex-row gap-2 justify-center sm:justify-start">
+                <i class="ph-envelope-simple text-xl text-white inline-block sm:mt-[2px]"></i>
+                <p class="text-base text-white/60 lg:w-[calc(100%-20px)] truncate">contact@company.com</p>
+              </li>
+              <li class="flex flex-row gap-2 justify-center sm:justify-start">
+                <i class="ph-phone text-xl text-white inline-block sm:mt-[2px]"></i>
+                <p class="text-base text-white/60 lg:w-[calc(100%-20px)] truncate">(414) 687 - 5892</p>
+              </li>
+              <li class="flex flex-row gap-2 justify-center sm:justify-start">
+                <i class="ph-map-pin text-xl text-white inline-block sm:mt-[2px]"></i>
+                <p class="text-base text-white/60 lg:w-[calc(100%-20px)] truncate">794 Mcallister St <br class="hidden md:block"> Knoxville, TN</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer-top end -->
+
+    <!-- footer-bottom start -->
+    <section class="footer-bottom">
+      <div class="container">
+        <div class="flex items-center justify-center border-t border-white/20 pt-6">
+          <p class="text-white/60 text-sm lg:text-base">Copyright © 2022 Medico</p>
+        </div>
+      </div>
+    </section>
+    <!-- footer-bottom end -->
+  </footer>
+  <!-- footer end -->
+
+  <script src="src/js/jquery-3.6.1.min.js"></script>
+  <script src="src/js/jquery.datetimepicker.full.js"></script>
+  <script src="src/js/jquery.magnific-popup.min.js"></script>
+  <script src="src/js/select2.min.js"></script>
+  <script src="src/js/mixitup.min.js"></script>
+  <script src="src/js/script.js"></script>
+</body>
+</html>
