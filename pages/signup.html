@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,9 @@
   <link rel="shortcut icon" href="../src/images/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="../src/css/all.min.css">
-  <link rel="stylesheet" href="../src/css/select-dropdown.css">
-  <link rel="stylesheet" href="../src/css/magnific-popup.css">
   <link rel="stylesheet" href="../src/css/select2.min.css">
+  <link rel="stylesheet" href="../src/css/magnific-popup.css">
+  <link rel="stylesheet" href="../src/css/select-dropdown.css">
   <link rel="stylesheet" href="../src/css/jquery.datetimepicker.css">
   <link rel="stylesheet" href="../src/css/datetimepicker.css">
   <link rel="stylesheet" href="../dist/output.css">
@@ -25,18 +26,25 @@
     <section class="login">
       <div class="flex">
         <!-- left part -->
-        <div class="lg:w-[350px] xl:w-[400px] 2xl:w-[618px] h-screen left-bar flex-shrink-0 lg:p-6 xl:p-10 hidden lg:flex flex-col justify-between">
+        <div
+          class="lg:w-[350px] xl:w-[400px] 2xl:w-[618px] h-screen left-bar flex-shrink-0 lg:p-6 xl:p-10 hidden lg:flex flex-col justify-between">
           <div>
-            <img src="../src/images/logo-white.png" alt="Logo">
-            <h2 class="pt-20 text-white lg:text-[23px] lg:leading-9 xl:text-2xl xl:leading-10 2xl:text-[40px] 2xl:leading-[60px] font-semibold">Simply fill out the form to get started</h2>
+            <a href="../index.html">
+              <img src="../src/images/logo-white.png" alt="Logo">
+            </a>
+            <h2
+              class="pt-20 text-white lg:text-[23px] lg:leading-9 xl:text-2xl xl:leading-10 2xl:text-[40px] 2xl:leading-[60px] font-semibold">
+              Simply fill out the form to get started</h2>
           </div>
-          <p class="lg:pb-10 2xl:pb-20 text-white text-sm max-w-[385px]">Protected by reCAPTCHA and subject to the Medico Privacy Policy and Terms of Service.</p>
+          <p class="lg:pb-10 2xl:pb-20 text-white text-sm max-w-[385px]">Protected by reCAPTCHA and subject to the
+            Medico Privacy Policy and Terms of Service.</p>
         </div>
 
         <!-- right part -->
         <div class="flex-grow flex flex-col-reverse lg:flex-col mt-14 lg:mt-0">
           <div class="pt-7 pb-3 lg:py-6 xl:py-10 px-6 2xl:pr-[200px] 3xl:pr-[312px] text-center lg:text-right">
-            <p class="text-sm font-medium text-primary-text">Already have an account? <a href="login.html" class="text-primary underline hover:underline">Sign in</a></p>
+            <p class="text-sm font-medium text-primary-text">Already have an account? <a href="login.html"
+                class="text-primary underline hover:underline">Sign in</a></p>
           </div>
 
           <div class="h-[calc(100%-100px)] w-full flex items-center justify-center">
@@ -50,7 +58,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#!" class="w-12 h-12 rounded-[5px] bg-white border border-[#DCDBDD] flex items-center justify-center">
+                  <a href="#!"
+                    class="w-12 h-12 rounded-[5px] bg-white border border-[#DCDBDD] flex items-center justify-center">
                     <img src="../src/images/svg/google.svg" alt="Google Icon">
                   </a>
                 </li>
@@ -65,22 +74,28 @@
               <form action="#!">
                 <!-- Full Name -->
                 <div class="mb-4">
-                  <label for="full_name" class="block mb-2 text-base font-medium lg:font-semibold text-primary-text">Full Name</label>
-                  <input type="text" id="full_name" placeholder="Enter your Full Name" class="outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+                  <label for="full_name"
+                    class="block mb-2 text-base font-medium lg:font-semibold text-primary-text">Full Name</label>
+                  <input type="text" id="full_name" placeholder="Enter your Full Name"
+                    class="outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
                 </div>
 
                 <!-- email -->
                 <div class="mb-4">
-                  <label for="email_signin" class="block mb-2 text-base font-medium lg:font-semibold text-primary-text">Email</label>
-                  <input type="email" id="email_signin" placeholder="Enter your Email" class="outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+                  <label for="email_signin"
+                    class="block mb-2 text-base font-medium lg:font-semibold text-primary-text">Email</label>
+                  <input type="email" id="email_signin" placeholder="Enter your Email"
+                    class="outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
                 </div>
 
                 <!-- password -->
                 <div class="mb-10">
-                  <p class="mb-2 text-base font-medium lg:font-semibold text-primary-text">Password</p> 
+                  <p class="mb-2 text-base font-medium lg:font-semibold text-primary-text">Password</p>
                   <label for="pass_signin" class="block relative">
-                    <input type="password" id="pass_signin" placeholder="Enter your Password" psswd-shown="false" class="input-psswd outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
-                    <button type="button" class="eye-btn absolute top-1/2 -translate-y-1/2 right-[10px] h-4 w-4 flex items-center justify-center">
+                    <input type="password" id="pass_signin" placeholder="Enter your Password" psswd-shown="false"
+                      class="input-psswd outline-none border border-solid border-black/20 rounded-lg w-full h-10 px-[10px] text-sm text-primary-text placeholder:text-sm placeholder:text-primary-text/40">
+                    <button type="button"
+                      class="eye-btn absolute top-1/2 -translate-y-1/2 right-[10px] h-4 w-4 flex items-center justify-center">
                       <span class="h-5 eye-off">
                         <i class="ph-eye-slash text-xl text-primary-text/60"></i>
                       </span>
@@ -92,7 +107,8 @@
                 </div>
 
                 <!-- submit button -->
-                <button type="submit" class="w-full box-border py-3 text-center text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Register</button>
+                <button type="submit"
+                  class="w-full box-border py-3 text-center text-white text-sm font-semibold rounded-md bg-primary shadow-[0px_10px_10px_rgba(55,214,201,0.24)] hover:bg-primary-alt hover:shadow-none">Register</button>
               </form>
             </div>
           </div>
@@ -109,4 +125,5 @@
   <script src="../src/js/mixitup.min.js"></script>
   <script src="../src/js/script.js"></script>
 </body>
+
 </html>
