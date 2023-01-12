@@ -211,5 +211,30 @@ $(function(){
       }
       return false;
     });
+
+    /*======================= input password ========================*/
+    $('.eye-btn').on('click', function() {
+        
+      if ($('.input-psswd').attr('psswd-shown') == 'false') {
+        $('.input-psswd').removeAttr('type');
+        $('.input-psswd').attr('type', 'text');
+        
+        $('.input-psswd').removeAttr('psswd-shown');
+        $('.input-psswd').attr('psswd-shown', 'true');
+        
+        $('.eye-off').addClass('hidden');
+        $('.eye-on').removeClass('hidden'); 
+      }
+      else {
+        $('.input-psswd').removeAttr('type');
+        $('.input-psswd').attr('type', 'password');
+        
+        $('.input-psswd').removeAttr('psswd-shown');
+        $('.input-psswd').attr('psswd-shown', 'false');
+        
+        $('.eye-on').addClass('hidden');
+        $('.eye-off').removeClass('hidden');
+      }
+  });
   
 });

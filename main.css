@@ -156,6 +156,11 @@ a:focus {
   scrollbar-width: none;
 }
 
+/* login */
+.login .left-bar{
+  background: linear-gradient(159.99deg, #045AB5 0%, #0495B5 100%);
+}
+
 /* navbar css */
 .nav-link.active {
   @apply text-secondary;
