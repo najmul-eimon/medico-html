@@ -2389,7 +2389,7 @@ a:focus {
 
 @media screen and (min-width:1024px) {
   .map-bg{
-    background: url('../src/images/map.png');
+    background-image: url('../src/images/map.png');
   }
 }
 
@@ -3423,10 +3423,6 @@ a:focus {
 
   .lg\:bg-transparent{
     background-color: transparent;
-  }
-
-  .lg\:bg-map-image{
-    background-image: url('/src/images/map.png');
   }
 
   .lg\:p-0{
