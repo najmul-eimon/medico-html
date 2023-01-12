@@ -192,6 +192,12 @@
   display: none;
 }
 
+@media (min-width:1280px) and (max-width:1400px) {
+  .xdsoft_datetimepicker .xdsoft_datepicker,
+  .xdsoft_datetimepicker .xdsoft_timepicker {
+    width: 400px;
+  }
+}
 @media (min-width:1024px) and (max-width:1535px) {
   .xdsoft_datetimepicker.xdsoft_inline {
     gap: 24px;
