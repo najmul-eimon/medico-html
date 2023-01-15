@@ -66,7 +66,7 @@ $(function(){
   /*======================== Search field hide/show ===========================*/
   if(window.innerWidth > 1023){
     $('.search-blog-btn').on('click', function(){
-      $('.search-blog-input').toggleClass('!w-[400px] xl:!w-[482px] pr-4');
+      $('.search-blog-input').toggleClass('!w-[350px] xl:!w-[482px] pr-4');
     });
   }
 

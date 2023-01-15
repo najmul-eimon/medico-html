@@ -1,12 +1,14 @@
 // /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["*", "./pages/*html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      "sm": "640px",
-      "md": "768px",
-      "lg": "1024px",
-      "xl": "1280px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
       "2xl": "1536px",
       "3xl": "1820px",
     },
@@ -20,6 +22,10 @@ module.exports = {
         "2xl": "12px"
       },
       screens: {
+        sm: "600px",
+        md: "728px",
+        lg: "984px",
+        xl: "1240px",
         '2xl' : '1320px'
       }
     },
@@ -32,8 +38,8 @@ module.exports = {
         'secondary-text': '#4A5567',
       },
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
-        'mulish': ['Mulish', 'sans-serif'],
+        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+        mulish: ['Mulish', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         'hero-image': "url('/src/images/banner.jpg')",

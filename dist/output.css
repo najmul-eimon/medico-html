@@ -47,7 +47,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -523,6 +523,36 @@ video {
   margin-left: auto;
   padding-right: 16px;
   padding-left: 16px;
+}
+
+@media (min-width: 600px){
+  .container{
+    max-width: 600px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+@media (min-width: 728px){
+  .container{
+    max-width: 728px;
+  }
+}
+
+@media (min-width: 984px){
+  .container{
+    max-width: 984px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+@media (min-width: 1240px){
+  .container{
+    max-width: 1240px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
 }
 
 @media (min-width: 1320px){
@@ -1006,8 +1036,8 @@ video {
   width: 1rem;
 }
 
-.\!w-\[400px\]{
-  width: 400px !important;
+.\!w-\[350px\]{
+  width: 350px !important;
 }
 
 .max-w-\[580px\]{
@@ -1673,10 +1703,6 @@ video {
   padding-top: 1rem;
 }
 
-.pt-2{
-  padding-top: 0.5rem;
-}
-
 .pb-4{
   padding-bottom: 1rem;
 }
@@ -1735,6 +1761,10 @@ video {
 
 .pt-\[10px\]{
   padding-top: 10px;
+}
+
+.pt-2{
+  padding-top: 0.5rem;
 }
 
 .pt-3{
@@ -2079,7 +2109,7 @@ video {
 body {
   width: 100%;
   max-width: 100%;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 html {
@@ -2241,15 +2271,17 @@ a:focus {
   background-image: linear-gradient(to right, rgba(49, 79, 162, 0.05) 55%, #37D6C9 55%);
 }
 
-@media (min-width: 1280px) and (max-width: 1400px) {
-  .container{
-    max-width: 1200px;
-  }
-}
-
 @media screen and (max-width:767px) {
   .why-we {
     background-image: linear-gradient(to bottom, rgba(49, 79, 162, 0.05) 65%, #37D6C9 65%);
+  }
+}
+
+/* service */
+
+@media (min-width:1240px) and (max-width:1279px) {
+  .service-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
 
@@ -2335,6 +2367,12 @@ a:focus {
   background-color: rgb(4 90 181 / 0.1);
   --tw-text-opacity: 1;
   color: rgb(4 90 181 / var(--tw-text-opacity));
+}
+
+@media (min-width:1024px) and (max-width: 1239px) {
+  .popular-blog-list{
+    max-height: 408px;
+  }
 }
 
 /* appointment */
@@ -3225,16 +3263,16 @@ a:focus {
     margin-top: 2.75rem;
   }
 
+  .lg\:mt-0{
+    margin-top: 0px;
+  }
+
   .lg\:mt-16{
     margin-top: 4rem;
   }
 
   .lg\:mb-28{
     margin-bottom: 7rem;
-  }
-
-  .lg\:mt-0{
-    margin-top: 0px;
   }
 
   .lg\:block{
@@ -3265,10 +3303,6 @@ a:focus {
     height: 92px;
   }
 
-  .lg\:max-h-\[636px\]{
-    max-height: 636px;
-  }
-
   .lg\:w-auto{
     width: auto;
   }
@@ -3285,8 +3319,8 @@ a:focus {
     width: 7rem;
   }
 
-  .lg\:w-\[46px\]{
-    width: 46px;
+  .lg\:w-11{
+    width: 2.75rem;
   }
 
   .lg\:w-\[180px\]{
@@ -3310,12 +3344,12 @@ a:focus {
     width: 92px;
   }
 
-  .lg\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-4{
@@ -3467,6 +3501,11 @@ a:focus {
     padding-bottom: 1.5rem;
   }
 
+  .lg\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .lg\:py-20{
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -3475,6 +3514,10 @@ a:focus {
   .lg\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .lg\:pt-2{
+    padding-top: 0.5rem;
   }
 
   .lg\:pt-10{
@@ -3536,11 +3579,6 @@ a:focus {
     font-size: 32px;
   }
 
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .lg\:text-5xl{
     font-size: 3rem;
     line-height: 1;
@@ -3561,8 +3599,17 @@ a:focus {
     line-height: 1.75rem;
   }
 
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .lg\:text-\[23px\]{
     font-size: 23px;
+  }
+
+  .lg\:text-\[34px\]{
+    font-size: 34px;
   }
 
   .lg\:font-semibold{
@@ -3642,8 +3689,8 @@ a:focus {
     display: block;
   }
 
-  .xl\:w-16{
-    width: 4rem;
+  .xl\:w-\[60px\]{
+    width: 60px;
   }
 
   .xl\:w-\[400px\]{
@@ -3654,12 +3701,12 @@ a:focus {
     width: 482px !important;
   }
 
-  .xl\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .xl\:gap-6{
@@ -3697,6 +3744,11 @@ a:focus {
   .xl\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .xl\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .xl\:py-10{
