@@ -1,15 +1,20 @@
 $(function(){
   "use strick";
 
+  /*======================== preloader ===========================*/
+  $(document).ready(function() {
+    $("#preloader").fadeOut(500); 
+  });
+
   /*======================== Mobile menu toggle ===========================*/
   $('.menu-toggle').on('click', function(){
-    $('body').addClass('scroll-lock');
+    $('body').addClass('overflow-hidden');
     $('.mobile-menu').removeClass('-left-[320px]').addClass('left-0');
     $('.mobile-overlay').removeClass('opacity-0, invisible').addClass('opacity-100 visible');
   });
 
   $('.close-menu, .mobile-overlay').on('click', function(){
-    $('body').removeClass('scroll-lock');
+    $('body').removeClass('overflow-hidden');
     $('.mobile-menu').addClass('-left-[320px]').removeClass('left-0');
     $('.mobile-overlay').addClass('opacity-0, invisible').removeClass('opacity-100 visible');
   });

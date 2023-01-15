@@ -39,7 +39,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
-        mulish: ['Mulish', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         'hero-image': "url('/src/images/banner.jpg')",
