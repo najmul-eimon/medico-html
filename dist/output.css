@@ -1797,6 +1797,14 @@ video {
   padding-top: 124px;
 }
 
+.pl-\[10px\]{
+  padding-left: 10px;
+}
+
+.pr-10{
+  padding-right: 2.5rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -3020,6 +3028,10 @@ a:focus {
     width: 135px;
   }
 
+  .md\:w-\[170px\]{
+    width: 170px;
+  }
+
   .md\:w-auto{
     width: auto;
   }
@@ -3066,10 +3078,6 @@ a:focus {
 
   .md\:gap-0{
     gap: 0px;
-  }
-
-  .md\:gap-10{
-    gap: 2.5rem;
   }
 
   .md\:gap-y-10{
@@ -3180,14 +3188,14 @@ a:focus {
     line-height: 1.5rem;
   }
 
-  .md\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:font-semibold{
@@ -3414,6 +3422,10 @@ a:focus {
     gap: 5rem;
   }
 
+  .lg\:gap-10{
+    gap: 2.5rem;
+  }
+
   .lg\:gap-6{
     gap: 1.5rem;
   }
@@ -3607,6 +3619,11 @@ a:focus {
     line-height: 2.25rem;
   }
 
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .lg\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -3615,11 +3632,6 @@ a:focus {
   .lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .lg\:text-\[23px\]{
