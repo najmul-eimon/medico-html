@@ -69,11 +69,14 @@ $(function(){
   });
 
   /*======================== Search field hide/show ===========================*/
-  if(window.innerWidth > 1023){
-    $('.search-blog-btn').on('click', function(){
+  $('.search-blog-btn').on('click', function(){
+    if(window.innerWidth > 1023){
       $('.search-blog-input').toggleClass('!w-[350px] xl:!w-[482px] pr-4');
-    });
-  }
+    }
+    else{
+      $('.search-blog-input').addClass('w-full');
+    }
+  });
 
   /*======================= blog tab filtering ========================*/
   $('.blog-filter-btns button').on('click', function (event) {

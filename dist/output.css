@@ -929,6 +929,10 @@ video {
   height: 380px;
 }
 
+.h-\[50px\]{
+  height: 50px;
+}
+
 .min-h-\[70px\]{
   min-height: 70px;
 }
@@ -1793,16 +1797,16 @@ video {
   padding-top: 1.75rem;
 }
 
-.pt-\[124px\]{
-  padding-top: 124px;
-}
-
 .pl-\[10px\]{
   padding-left: 10px;
 }
 
 .pr-10{
   padding-right: 2.5rem;
+}
+
+.pt-\[124px\]{
+  padding-top: 124px;
 }
 
 .text-center{
