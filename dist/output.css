@@ -2399,11 +2399,11 @@ a:focus {
   color: rgb(4 90 181 / var(--tw-text-opacity));
 }
 
-@media (min-width:1024px) and (max-width: 1239px) {
+/* @media (min-width:1024px) and (max-width: 1239px) {
   .popular-blog-list{
     max-height: 408px;
   }
-}
+} */
 
 /* appointment */
 
@@ -3228,6 +3228,10 @@ a:focus {
     position: static;
   }
 
+  .lg\:absolute{
+    position: absolute;
+  }
+
   .lg\:col-span-5{
     grid-column: span 5 / span 5;
   }
@@ -3331,6 +3335,10 @@ a:focus {
 
   .lg\:h-\[92px\]{
     height: 92px;
+  }
+
+  .lg\:max-h-\[calc\(100\%-56px\)\]{
+    max-height: calc(100% - 56px);
   }
 
   .lg\:w-auto{

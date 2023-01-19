@@ -235,11 +235,11 @@ a:focus {
   @apply bg-secondary/10 text-secondary;
 }
 
-@media (min-width:1024px) and (max-width: 1239px) {
+/* @media (min-width:1024px) and (max-width: 1239px) {
   .popular-blog-list{
     max-height: 408px;
   }
-}
+} */
 
 /* appointment */
 .appointment .tab-list li h5,

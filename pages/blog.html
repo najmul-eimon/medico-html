@@ -77,7 +77,7 @@
     <!-- popular-blogs start -->
     <section class="popular-blogs pt-6 lg:pt-10">
       <div class="container">
-        <div class="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-3 gap-6 relative">
           <!-- big-blog -->
           <div class="lg:col-span-3 xl:col-span-2">
             <div class="rounded-[20px] overflow-hidden relative h-[288px] lg:h-auto">
@@ -93,10 +93,10 @@
           </div>
 
           <!-- popular-blogs -->
-          <div class="lg:col-span-2 xl:col-span-1">
+          <div class="lg:col-span-2 xl:col-span-1 relative">
             <h4 class="pb-6 text-base lg:text-2xl font-semibold text-primary-text">Popular</h4>
             <!-- popular blog list -->
-            <ul class="space-y-6 custom-scrollbar lg:overflow-y-auto popular-blog-list">
+            <ul class="space-y-6 custom-scrollbar lg:overflow-y-auto popular-blog-list lg:absolute lg:max-h-[calc(100%-56px)]">
               <!-- item 1 -->
               <li class="flex items-center gap-2 lg:gap-4 xl:gap-6">
                 <!-- image -->
