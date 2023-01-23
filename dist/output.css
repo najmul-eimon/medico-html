@@ -3105,6 +3105,11 @@ a:focus {
     padding-right: 2rem;
   }
 
+  .md\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -3690,12 +3695,12 @@ a:focus {
     grid-column: span 3 / span 3;
   }
 
-  .xl\:col-span-1{
-    grid-column: span 1 / span 1;
-  }
-
   .xl\:col-span-2{
     grid-column: span 2 / span 2;
+  }
+
+  .xl\:col-span-1{
+    grid-column: span 1 / span 1;
   }
 
   .xl\:col-span-6{
@@ -3913,13 +3918,13 @@ a:focus {
     line-height: 2rem;
   }
 
+  .\32xl\:text-\[40px\]{
+    font-size: 40px;
+  }
+
   .\32xl\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .\32xl\:text-\[40px\]{
-    font-size: 40px;
   }
 
   .\32xl\:leading-\[72px\]{
