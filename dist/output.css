@@ -616,6 +616,14 @@ video {
   right: 0.75rem;
 }
 
+.bottom-10{
+  bottom: 2.5rem;
+}
+
+.right-5{
+  right: 1.25rem;
+}
+
 .right-6{
   right: 1.5rem;
 }
@@ -836,6 +844,10 @@ video {
   height: 5rem;
 }
 
+.h-10{
+  height: 2.5rem;
+}
+
 .h-\[173px\]{
   height: 173px;
 }
@@ -855,10 +867,6 @@ video {
 
 .h-\[6px\]{
   height: 6px;
-}
-
-.h-10{
-  height: 2.5rem;
 }
 
 .h-0{
@@ -987,6 +995,10 @@ video {
 
 .w-\[150px\]{
   width: 150px;
+}
+
+.w-10{
+  width: 2.5rem;
 }
 
 .w-\[132px\]{
@@ -2202,6 +2214,39 @@ a:focus {
 
 .scroll-lock {
   overflow: hidden;
+}
+
+/* scroll Top Button */
+
+.scrollTopButton{
+  position: fixed;
+  bottom: 2.5rem;
+  right: 1.25rem;
+  z-index: 50;
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(4 90 181 / var(--tw-bg-opacity));
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.scrollTopButton.show{
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 /* play button animation */

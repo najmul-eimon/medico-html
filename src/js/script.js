@@ -1,6 +1,21 @@
 $(function(){
   "use strick";
 
+  /*======================== scroll to top ===========================*/
+  $('.scrollTopButton').click(function () {
+    $('html').animate({
+        scrollTop: 0
+    }, 1000);
+  });
+  $(window).scroll(function () {
+      var $scrolling = $(this).scrollTop();
+
+      if ($scrolling > 300) {
+          $('.scrollTopButton').addClass('show');
+      } else {
+          $('.scrollTopButton').removeClass('show');
+      }
+  });
   /*======================== preloader ===========================*/
   $(document).ready(function() {
     $("#preloader").fadeOut(500); 
