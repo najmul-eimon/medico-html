@@ -231,7 +231,7 @@ a:focus {
 }
 
 .pricing-card.active a{
-  @apply py-[6px] md:py-[10px] border border-white;
+  @apply py-[11px] border border-white;
 }
 
 /* paginatioin */
@@ -244,11 +244,6 @@ a:focus {
   @apply bg-secondary/10 text-secondary;
 }
 
-/* @media (min-width:1024px) and (max-width: 1239px) {
-  .popular-blog-list{
-    max-height: 408px;
-  }
-} */
 
 /* appointment */
 .appointment .tab-list li h5,
@@ -401,7 +396,7 @@ a:focus {
 }
 
 .appointment .tab-content .select2-container--default .select2-selection--single .select2-selection__rendered{
-  @apply text-primary-text/40 text-sm font-normal leading-10;
+  @apply text-primary-text text-sm font-normal leading-10;
   padding-left: 10px;
   padding-right: 10px;
 }

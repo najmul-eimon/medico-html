@@ -1666,9 +1666,9 @@ video {
   padding-bottom: 1rem;
 }
 
-.py-\[6px\]{
-  padding-top: 6px;
-  padding-bottom: 6px;
+.py-\[11px\]{
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .px-6{
@@ -1699,6 +1699,11 @@ video {
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-\[6px\]{
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .pt-10{
@@ -2414,15 +2419,8 @@ a:focus {
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-@media (min-width: 768px){
-  .pricing-card.active a{
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 /* paginatioin */
@@ -2443,12 +2441,6 @@ a:focus {
   --tw-text-opacity: 1;
   color: rgb(4 90 181 / var(--tw-text-opacity));
 }
-
-/* @media (min-width:1024px) and (max-width: 1239px) {
-  .popular-blog-list{
-    max-height: 408px;
-  }
-} */
 
 /* appointment */
 
@@ -2629,7 +2621,8 @@ a:focus {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 2.5rem;
-  color: rgb(0 32 29 / 0.4);
+  --tw-text-opacity: 1;
+  color: rgb(0 32 29 / var(--tw-text-opacity));
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -3188,11 +3181,6 @@ a:focus {
   .md\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .md\:py-\[10px\]{
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .md\:pt-0{
@@ -3945,8 +3933,8 @@ a:focus {
     padding-left: 120px;
   }
 
-  .\32xl\:pb-20{
-    padding-bottom: 5rem;
+  .\32xl\:pb-16{
+    padding-bottom: 4rem;
   }
 
   .\32xl\:pr-\[200px\]{
